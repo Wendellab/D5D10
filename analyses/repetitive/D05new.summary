@@ -1,0 +1,213 @@
+D5_new.fasta.out_D5_01.copynumber.csv:###DNA/EnSpmCACTA	All_elements	NA	211	123	NA	356265	0.6290
+D5_new.fasta.out_D5_01.copynumber.csv:###DNA/Harbinger	All_elements	NA	2	1	NA	863	0.0015
+D5_new.fasta.out_D5_01.copynumber.csv:###DNA/L1	All_elements	NA	83	38	NA	104343	0.1842
+D5_new.fasta.out_D5_01.copynumber.csv:###DNA/MarinerTc1	All_elements	NA	4	2	NA	3890	0.0069
+D5_new.fasta.out_D5_01.copynumber.csv:###DNA/MuDR	All_elements	NA	1150	721	NA	975375	1.7220
+D5_new.fasta.out_D5_01.copynumber.csv:###DNA/hAT	All_elements	NA	197	120	NA	62690	0.1107
+D5_new.fasta.out_D5_01.copynumber.csv:######Type:DNA	All_elements	NA	1647	1005	NA	1503426	2.6543
+D5_new.fasta.out_D5_01.copynumber.csv:######Type:LINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_01.copynumber.csv:######Type:SINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_01.copynumber.csv:###LTR	All_elements	NA	1	1	0	95	0.0002
+D5_new.fasta.out_D5_01.copynumber.csv:###LTR/Copia	All_elements	NA	3854	2227	805	3717213	6.5626
+D5_new.fasta.out_D5_01.copynumber.csv:###LTR/Gypsy	All_elements	NA	22118	12958	7079	17563728	31.0082
+D5_new.fasta.out_D5_01.copynumber.csv:######Type:LTR	All_elements	NA	25973	15186	7884	21281036	37.5710
+D5_new.fasta.out_D5_01.copynumber.csv:######Type:Unknown	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_01.copynumber.csv:#########Type:EVERYTHING_TE	All_elements	NA	27620	16191	NA	22784462	40.2253
+D5_new.fasta.out_D5_02.copynumber.csv:###DNA/EnSpmCACTA	All_elements	NA	212	125	NA	409236	0.8835
+D5_new.fasta.out_D5_02.copynumber.csv:###DNA/Harbinger	All_elements	NA	2	1	NA	703	0.0015
+D5_new.fasta.out_D5_02.copynumber.csv:###DNA/L1	All_elements	NA	62	32	NA	62437	0.1348
+D5_new.fasta.out_D5_02.copynumber.csv:###DNA/MULE-MuDR	All_elements	NA	1	1	NA	95	0.0002
+D5_new.fasta.out_D5_02.copynumber.csv:###DNA/MarinerTc1	All_elements	NA	5	2	NA	4101	0.0089
+D5_new.fasta.out_D5_02.copynumber.csv:###DNA/MuDR	All_elements	NA	897	552	NA	802073	1.7315
+D5_new.fasta.out_D5_02.copynumber.csv:###DNA/hAT	All_elements	NA	201	132	NA	69606	0.1503
+D5_new.fasta.out_D5_02.copynumber.csv:######Type:DNA	All_elements	NA	1380	845	NA	1348251	2.9106
+D5_new.fasta.out_D5_02.copynumber.csv:######Type:LINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_02.copynumber.csv:######Type:SINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_02.copynumber.csv:###LTR	All_elements	NA	10	10	0	933	0.0020
+D5_new.fasta.out_D5_02.copynumber.csv:###LTR/Copia	All_elements	NA	3042	1800	724	2796245	6.0365
+D5_new.fasta.out_D5_02.copynumber.csv:###LTR/Gypsy	All_elements	NA	18776	11000	6081	15460235	33.3755
+D5_new.fasta.out_D5_02.copynumber.csv:######Type:LTR	All_elements	NA	21828	12810	6805	18257413	39.4140
+D5_new.fasta.out_D5_02.copynumber.csv:######Type:Unknown	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_02.copynumber.csv:#########Type:EVERYTHING_TE	All_elements	NA	23208	13655	NA	19605664	42.3246
+D5_new.fasta.out_D5_03.copynumber.csv:###DNA/EnSpmCACTA	All_elements	NA	234	137	NA	426854	0.6772
+D5_new.fasta.out_D5_03.copynumber.csv:###DNA/Harbinger	All_elements	NA	4	4	NA	4064	0.0064
+D5_new.fasta.out_D5_03.copynumber.csv:###DNA/L1	All_elements	NA	93	45	NA	124092	0.1969
+D5_new.fasta.out_D5_03.copynumber.csv:###DNA/MULE-MuDR	All_elements	NA	1	1	NA	95	0.0002
+D5_new.fasta.out_D5_03.copynumber.csv:###DNA/MarinerTc1	All_elements	NA	8	4	NA	6049	0.0096
+D5_new.fasta.out_D5_03.copynumber.csv:###DNA/MuDR	All_elements	NA	1069	663	NA	906117	1.4376
+D5_new.fasta.out_D5_03.copynumber.csv:###DNA/PIF-Harbinger	All_elements	NA	2	1	NA	817	0.0013
+D5_new.fasta.out_D5_03.copynumber.csv:###DNA/hAT	All_elements	NA	250	156	NA	86541	0.1373
+D5_new.fasta.out_D5_03.copynumber.csv:###DNA/hAT-Tip100	All_elements	NA	2	1	NA	1314	0.0021
+D5_new.fasta.out_D5_03.copynumber.csv:######Type:DNA	All_elements	NA	1663	1012	NA	1555943	2.4685
+D5_new.fasta.out_D5_03.copynumber.csv:######Type:LINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_03.copynumber.csv:######Type:SINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_03.copynumber.csv:###LTR/Copia	All_elements	NA	4486	2608	1040	4353391	6.9067
+D5_new.fasta.out_D5_03.copynumber.csv:###LTR/Gypsy	All_elements	NA	25299	14543	7853	20402299	32.3685
+D5_new.fasta.out_D5_03.copynumber.csv:######Type:LTR	All_elements	NA	29785	17151	8893	24755690	39.2752
+D5_new.fasta.out_D5_03.copynumber.csv:######Type:Unknown	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_03.copynumber.csv:#########Type:EVERYTHING_TE	All_elements	NA	31448	18163	NA	26311633	41.7438
+D5_new.fasta.out_D5_04.copynumber.csv:###DNA/EnSpmCACTA	All_elements	NA	229	127	NA	381502	0.7647
+D5_new.fasta.out_D5_04.copynumber.csv:###DNA/L1	All_elements	NA	101	48	NA	104040	0.2086
+D5_new.fasta.out_D5_04.copynumber.csv:###DNA/MarinerTc1	All_elements	NA	2	2	NA	1075	0.0022
+D5_new.fasta.out_D5_04.copynumber.csv:###DNA/MuDR	All_elements	NA	1131	676	NA	1032045	2.0688
+D5_new.fasta.out_D5_04.copynumber.csv:###DNA/hAT	All_elements	NA	170	108	NA	64330	0.1290
+D5_new.fasta.out_D5_04.copynumber.csv:###DNA/hAT-Tip100	All_elements	NA	4	2	NA	4074	0.0082
+D5_new.fasta.out_D5_04.copynumber.csv:######Type:DNA	All_elements	NA	1637	963	NA	1587066	3.1814
+D5_new.fasta.out_D5_04.copynumber.csv:######Type:LINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_04.copynumber.csv:######Type:SINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_04.copynumber.csv:###LTR/Copia	All_elements	NA	3723	2167	868	3415785	6.8471
+D5_new.fasta.out_D5_04.copynumber.csv:###LTR/Gypsy	All_elements	NA	19525	11326	6258	15811626	31.6953
+D5_new.fasta.out_D5_04.copynumber.csv:######Type:LTR	All_elements	NA	23248	13493	7126	19227411	38.5424
+D5_new.fasta.out_D5_04.copynumber.csv:######Type:Unknown	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_04.copynumber.csv:#########Type:EVERYTHING_TE	All_elements	NA	24885	14456	NA	20814477	41.7238
+D5_new.fasta.out_D5_05.copynumber.csv:###DNA/EnSpmCACTA	All_elements	NA	229	133	NA	324212	0.5708
+D5_new.fasta.out_D5_05.copynumber.csv:###DNA/Harbinger	All_elements	NA	10	6	NA	4435	0.0078
+D5_new.fasta.out_D5_05.copynumber.csv:###DNA/L1	All_elements	NA	109	57	NA	128781	0.2267
+D5_new.fasta.out_D5_05.copynumber.csv:###DNA/MULE-MuDR	All_elements	NA	3	3	NA	285	0.0005
+D5_new.fasta.out_D5_05.copynumber.csv:###DNA/MarinerTc1	All_elements	NA	5	2	NA	4059	0.0071
+D5_new.fasta.out_D5_05.copynumber.csv:###DNA/MuDR	All_elements	NA	1020	664	NA	802006	1.4121
+D5_new.fasta.out_D5_05.copynumber.csv:###DNA/PIF-Harbinger	All_elements	NA	7	3	NA	2195	0.0039
+D5_new.fasta.out_D5_05.copynumber.csv:###DNA/hAT	All_elements	NA	297	200	NA	77301	0.1361
+D5_new.fasta.out_D5_05.copynumber.csv:###DNA/hAT-Tip100	All_elements	NA	1	1	NA	879	0.0015
+D5_new.fasta.out_D5_05.copynumber.csv:######Type:DNA	All_elements	NA	1681	1069	NA	1344153	2.3666
+D5_new.fasta.out_D5_05.copynumber.csv:######Type:LINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_05.copynumber.csv:######Type:SINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_05.copynumber.csv:###LTR	All_elements	NA	25	25	0	2302	0.0041
+D5_new.fasta.out_D5_05.copynumber.csv:###LTR/Copia	All_elements	NA	2769	1673	594	2458288	4.3282
+D5_new.fasta.out_D5_05.copynumber.csv:###LTR/Gypsy	All_elements	NA	17956	10879	6549	12733252	22.4189
+D5_new.fasta.out_D5_05.copynumber.csv:######Type:LTR	All_elements	NA	20750	12577	7143	15193842	26.7512
+D5_new.fasta.out_D5_05.copynumber.csv:######Type:Unknown	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_05.copynumber.csv:#########Type:EVERYTHING_TE	All_elements	NA	22431	13646	NA	16537995	29.1178
+D5_new.fasta.out_D5_06.copynumber.csv:###DNA/EnSpmCACTA	All_elements	NA	255	156	NA	357624	0.5903
+D5_new.fasta.out_D5_06.copynumber.csv:###DNA/Harbinger	All_elements	NA	4	3	NA	2307	0.0038
+D5_new.fasta.out_D5_06.copynumber.csv:###DNA/L1	All_elements	NA	74	34	NA	71324	0.1177
+D5_new.fasta.out_D5_06.copynumber.csv:###DNA/MarinerTc1	All_elements	NA	4	2	NA	4055	0.0067
+D5_new.fasta.out_D5_06.copynumber.csv:###DNA/MuDR	All_elements	NA	1176	723	NA	1026914	1.6951
+D5_new.fasta.out_D5_06.copynumber.csv:###DNA/hAT	All_elements	NA	174	96	NA	78028	0.1288
+D5_new.fasta.out_D5_06.copynumber.csv:###DNA/hAT-Tip100	All_elements	NA	1	1	NA	2167	0.0036
+D5_new.fasta.out_D5_06.copynumber.csv:######Type:DNA	All_elements	NA	1688	1015	NA	1542419	2.5461
+D5_new.fasta.out_D5_06.copynumber.csv:######Type:LINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_06.copynumber.csv:######Type:SINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_06.copynumber.csv:###LTR	All_elements	NA	11	11	0	897	0.0015
+D5_new.fasta.out_D5_06.copynumber.csv:###LTR/Copia	All_elements	NA	4426	2631	1046	4063310	6.7074
+D5_new.fasta.out_D5_06.copynumber.csv:###LTR/Gypsy	All_elements	NA	24882	14235	7653	20253122	33.4322
+D5_new.fasta.out_D5_06.copynumber.csv:######Type:LTR	All_elements	NA	29319	16877	8699	24317329	40.1410
+D5_new.fasta.out_D5_06.copynumber.csv:######Type:Unknown	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_06.copynumber.csv:#########Type:EVERYTHING_TE	All_elements	NA	31007	17892	NA	25859748	42.6871
+D5_new.fasta.out_D5_07.copynumber.csv:###DNA/CMC-EnSpm	All_elements	NA	1	1	NA	116	0.0002
+D5_new.fasta.out_D5_07.copynumber.csv:###DNA/EnSpmCACTA	All_elements	NA	242	146	NA	371251	0.7209
+D5_new.fasta.out_D5_07.copynumber.csv:###DNA/Harbinger	All_elements	NA	3	3	NA	1573	0.0031
+D5_new.fasta.out_D5_07.copynumber.csv:###DNA/L1	All_elements	NA	118	56	NA	125521	0.2437
+D5_new.fasta.out_D5_07.copynumber.csv:###DNA/MarinerTc1	All_elements	NA	12	7	NA	8839	0.0172
+D5_new.fasta.out_D5_07.copynumber.csv:###DNA/MuDR	All_elements	NA	1185	750	NA	941655	1.8286
+D5_new.fasta.out_D5_07.copynumber.csv:###DNA/hAT	All_elements	NA	288	179	NA	89532	0.1739
+D5_new.fasta.out_D5_07.copynumber.csv:###DNA/hAT-Tip100	All_elements	NA	2	1	NA	2020	0.0039
+D5_new.fasta.out_D5_07.copynumber.csv:######Type:DNA	All_elements	NA	1851	1143	NA	1540507	2.9915
+D5_new.fasta.out_D5_07.copynumber.csv:######Type:LINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_07.copynumber.csv:######Type:SINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_07.copynumber.csv:###LTR	All_elements	NA	4	4	0	369	0.0007
+D5_new.fasta.out_D5_07.copynumber.csv:###LTR/Copia	All_elements	NA	3642	2153	936	3358380	6.5216
+D5_new.fasta.out_D5_07.copynumber.csv:###LTR/Gypsy	All_elements	NA	18529	10775	6056	14623201	28.3968
+D5_new.fasta.out_D5_07.copynumber.csv:######Type:LTR	All_elements	NA	22175	12932	6992	17981950	34.9192
+D5_new.fasta.out_D5_07.copynumber.csv:######Type:Unknown	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_07.copynumber.csv:#########Type:EVERYTHING_TE	All_elements	NA	24026	14075	NA	19522457	37.9107
+D5_new.fasta.out_D5_08.copynumber.csv:###DNA/EnSpmCACTA	All_elements	NA	256	152	NA	411428	0.6661
+D5_new.fasta.out_D5_08.copynumber.csv:###DNA/Harbinger	All_elements	NA	4	2	NA	2217	0.0036
+D5_new.fasta.out_D5_08.copynumber.csv:###DNA/L1	All_elements	NA	64	36	NA	106114	0.1718
+D5_new.fasta.out_D5_08.copynumber.csv:###DNA/MULE-MuDR	All_elements	NA	3	2	NA	776	0.0013
+D5_new.fasta.out_D5_08.copynumber.csv:###DNA/MarinerTc1	All_elements	NA	6	3	NA	4175	0.0068
+D5_new.fasta.out_D5_08.copynumber.csv:###DNA/MuDR	All_elements	NA	1193	743	NA	1048192	1.6971
+D5_new.fasta.out_D5_08.copynumber.csv:###DNA/hAT	All_elements	NA	291	171	NA	95074	0.1539
+D5_new.fasta.out_D5_08.copynumber.csv:###DNA/hAT-Tip100	All_elements	NA	2	1	NA	1028	0.0017
+D5_new.fasta.out_D5_08.copynumber.csv:######Type:DNA	All_elements	NA	1819	1110	NA	1669004	2.7022
+D5_new.fasta.out_D5_08.copynumber.csv:######Type:LINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_08.copynumber.csv:######Type:SINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_08.copynumber.csv:###LTR	All_elements	NA	57	51	0	4531	0.0073
+D5_new.fasta.out_D5_08.copynumber.csv:###LTR/Copia	All_elements	NA	4018	2414	959	3643132	5.8983
+D5_new.fasta.out_D5_08.copynumber.csv:###LTR/Gypsy	All_elements	NA	24496	14127	7752	19613756	31.7552
+D5_new.fasta.out_D5_08.copynumber.csv:######Type:LTR	All_elements	NA	28571	16592	8711	23261419	37.6609
+D5_new.fasta.out_D5_08.copynumber.csv:######Type:Unknown	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_08.copynumber.csv:#########Type:EVERYTHING_TE	All_elements	NA	30390	17702	NA	24930423	40.3630
+D5_new.fasta.out_D5_08.copynumber.csv:######Type:Satellite	All_elements	NA	NA	2	NA	206	0.0003
+D5_new.fasta.out_D5_09.copynumber.csv:###DNA/CMC-EnSpm	All_elements	NA	1	1	NA	90	0.0002
+D5_new.fasta.out_D5_09.copynumber.csv:###DNA/EnSpmCACTA	All_elements	NA	130	73	NA	255825	0.5849
+D5_new.fasta.out_D5_09.copynumber.csv:###DNA/Harbinger	All_elements	NA	11	7	NA	4740	0.0108
+D5_new.fasta.out_D5_09.copynumber.csv:###DNA/L1	All_elements	NA	90	45	NA	104535	0.2390
+D5_new.fasta.out_D5_09.copynumber.csv:###DNA/MULE-MuDR	All_elements	NA	5	5	NA	455	0.0010
+D5_new.fasta.out_D5_09.copynumber.csv:###DNA/MarinerTc1	All_elements	NA	3	2	NA	1983	0.0045
+D5_new.fasta.out_D5_09.copynumber.csv:###DNA/MuDR	All_elements	NA	825	511	NA	717092	1.6396
+D5_new.fasta.out_D5_09.copynumber.csv:###DNA/hAT	All_elements	NA	168	114	NA	52255	0.1195
+D5_new.fasta.out_D5_09.copynumber.csv:######Type:DNA	All_elements	NA	1233	758	NA	1136975	2.5996
+D5_new.fasta.out_D5_09.copynumber.csv:######Type:LINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_09.copynumber.csv:######Type:SINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_09.copynumber.csv:###LTR	All_elements	NA	41	40	0	3670	0.0084
+D5_new.fasta.out_D5_09.copynumber.csv:###LTR/Copia	All_elements	NA	3133	1898	717	2598723	5.9418
+D5_new.fasta.out_D5_09.copynumber.csv:###LTR/Gypsy	All_elements	NA	14341	8449	4871	10966034	25.0732
+D5_new.fasta.out_D5_09.copynumber.csv:######Type:LTR	All_elements	NA	17515	10387	5588	13568427	31.0235
+D5_new.fasta.out_D5_09.copynumber.csv:######Type:Unknown	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_09.copynumber.csv:#########Type:EVERYTHING_TE	All_elements	NA	18748	11145	NA	14705402	33.6231
+D5_new.fasta.out_D5_10.copynumber.csv:###DNA/EnSpmCACTA	All_elements	NA	350	196	NA	557389	0.8892
+D5_new.fasta.out_D5_10.copynumber.csv:###DNA/Harbinger	All_elements	NA	6	5	NA	3075	0.0049
+D5_new.fasta.out_D5_10.copynumber.csv:###DNA/L1	All_elements	NA	123	60	NA	145020	0.2313
+D5_new.fasta.out_D5_10.copynumber.csv:###DNA/MarinerTc1	All_elements	NA	5	3	NA	4073	0.0065
+D5_new.fasta.out_D5_10.copynumber.csv:###DNA/MuDR	All_elements	NA	1267	798	NA	1162585	1.8546
+D5_new.fasta.out_D5_10.copynumber.csv:###DNA/hAT	All_elements	NA	199	123	NA	79121	0.1262
+D5_new.fasta.out_D5_10.copynumber.csv:###DNA/hAT-Tip100	All_elements	NA	4	3	NA	3973	0.0063
+D5_new.fasta.out_D5_10.copynumber.csv:######Type:DNA	All_elements	NA	1954	1188	NA	1955236	3.1191
+D5_new.fasta.out_D5_10.copynumber.csv:######Type:LINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_10.copynumber.csv:######Type:SINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_10.copynumber.csv:###LTR	All_elements	NA	5	5	0	431	0.0007
+D5_new.fasta.out_D5_10.copynumber.csv:###LTR/Copia	All_elements	NA	4175	2544	916	3986342	6.3592
+D5_new.fasta.out_D5_10.copynumber.csv:###LTR/Gypsy	All_elements	NA	23262	13201	7254	18288099	29.1739
+D5_new.fasta.out_D5_10.copynumber.csv:######Type:LTR	All_elements	NA	27442	15750	8170	22274872	35.5337
+D5_new.fasta.out_D5_10.copynumber.csv:######Type:Unknown	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_10.copynumber.csv:#########Type:EVERYTHING_TE	All_elements	NA	29396	16938	NA	24230108	38.6528
+D5_new.fasta.out_D5_11.copynumber.csv:###DNA/EnSpmCACTA	All_elements	NA	306	188	NA	508156	0.7734
+D5_new.fasta.out_D5_11.copynumber.csv:###DNA/Harbinger	All_elements	NA	3	2	NA	2094	0.0032
+D5_new.fasta.out_D5_11.copynumber.csv:###DNA/L1	All_elements	NA	129	59	NA	150327	0.2288
+D5_new.fasta.out_D5_11.copynumber.csv:###DNA/MULE-MuDR	All_elements	NA	1	1	NA	63	0.0001
+D5_new.fasta.out_D5_11.copynumber.csv:###DNA/MarinerTc1	All_elements	NA	4	2	NA	3961	0.0060
+D5_new.fasta.out_D5_11.copynumber.csv:###DNA/MuDR	All_elements	NA	1428	940	NA	1229450	1.8713
+D5_new.fasta.out_D5_11.copynumber.csv:###DNA/PIF-Harbinger	All_elements	NA	2	1	NA	817	0.0012
+D5_new.fasta.out_D5_11.copynumber.csv:###DNA/hAT	All_elements	NA	297	177	NA	86361	0.1314
+D5_new.fasta.out_D5_11.copynumber.csv:######Type:DNA	All_elements	NA	2170	1370	NA	1981229	3.0155
+D5_new.fasta.out_D5_11.copynumber.csv:######Type:LINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_11.copynumber.csv:######Type:SINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_11.copynumber.csv:###LTR	All_elements	NA	38	38	0	2951	0.0045
+D5_new.fasta.out_D5_11.copynumber.csv:###LTR/Copia	All_elements	NA	4069	2409	807	3837831	5.8413
+D5_new.fasta.out_D5_11.copynumber.csv:###LTR/Gypsy	All_elements	NA	22400	13100	7582	17594360	26.7791
+D5_new.fasta.out_D5_11.copynumber.csv:######Type:LTR	All_elements	NA	26507	15547	8389	21435142	32.6248
+D5_new.fasta.out_D5_11.copynumber.csv:######Type:Unknown	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_11.copynumber.csv:#########Type:EVERYTHING_TE	All_elements	NA	28677	16917	NA	23416371	35.6403
+D5_new.fasta.out_D5_12.copynumber.csv:###DNA/EnSpmCACTA	All_elements	NA	224	136	NA	378367	0.6589
+D5_new.fasta.out_D5_12.copynumber.csv:###DNA/Harbinger	All_elements	NA	6	5	NA	3899	0.0068
+D5_new.fasta.out_D5_12.copynumber.csv:###DNA/L1	All_elements	NA	72	35	NA	91882	0.1600
+D5_new.fasta.out_D5_12.copynumber.csv:###DNA/MULE-MuDR	All_elements	NA	5	4	NA	518	0.0009
+D5_new.fasta.out_D5_12.copynumber.csv:###DNA/MarinerTc1	All_elements	NA	10	6	NA	7993	0.0139
+D5_new.fasta.out_D5_12.copynumber.csv:###DNA/MuDR	All_elements	NA	1235	764	NA	1080188	1.8812
+D5_new.fasta.out_D5_12.copynumber.csv:###DNA/hAT	All_elements	NA	166	88	NA	56254	0.0980
+D5_new.fasta.out_D5_12.copynumber.csv:######Type:DNA	All_elements	NA	1718	1038	NA	1619101	2.8197
+D5_new.fasta.out_D5_12.copynumber.csv:######Type:LINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_12.copynumber.csv:######Type:SINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_12.copynumber.csv:###LTR	All_elements	NA	1	1	0	95	0.0002
+D5_new.fasta.out_D5_12.copynumber.csv:###LTR/Copia	All_elements	NA	3553	2115	786	3210786	5.5916
+D5_new.fasta.out_D5_12.copynumber.csv:###LTR/Gypsy	All_elements	NA	21778	12731	7491	17383371	30.2735
+D5_new.fasta.out_D5_12.copynumber.csv:######Type:LTR	All_elements	NA	25332	14847	8277	20594252	35.8653
+D5_new.fasta.out_D5_12.copynumber.csv:######Type:Unknown	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_12.copynumber.csv:#########Type:EVERYTHING_TE	All_elements	NA	27050	15885	NA	22213353	38.6850
+D5_new.fasta.out_D5_13.copynumber.csv:###DNA/EnSpmCACTA	All_elements	NA	294	172	NA	505404	0.8593
+D5_new.fasta.out_D5_13.copynumber.csv:###DNA/Harbinger	All_elements	NA	3	2	NA	801	0.0014
+D5_new.fasta.out_D5_13.copynumber.csv:###DNA/L1	All_elements	NA	138	73	NA	172767	0.2937
+D5_new.fasta.out_D5_13.copynumber.csv:###DNA/MULE-MuDR	All_elements	NA	2	2	NA	190	0.0003
+D5_new.fasta.out_D5_13.copynumber.csv:###DNA/MarinerTc1	All_elements	NA	8	3	NA	4545	0.0077
+D5_new.fasta.out_D5_13.copynumber.csv:###DNA/MuDR	All_elements	NA	1252	775	NA	1063698	1.8084
+D5_new.fasta.out_D5_13.copynumber.csv:###DNA/hAT	All_elements	NA	365	221	NA	101809	0.1731
+D5_new.fasta.out_D5_13.copynumber.csv:######Type:DNA	All_elements	NA	2062	1248	NA	1849214	3.1439
+D5_new.fasta.out_D5_13.copynumber.csv:######Type:LINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_13.copynumber.csv:######Type:SINE	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_13.copynumber.csv:###LTR	All_elements	NA	21	20	0	1775	0.0030
+D5_new.fasta.out_D5_13.copynumber.csv:###LTR/Copia	All_elements	NA	4021	2393	898	3848288	6.5426
+D5_new.fasta.out_D5_13.copynumber.csv:###LTR/Gypsy	All_elements	NA	23273	13560	7480	18746910	31.8721
+D5_new.fasta.out_D5_13.copynumber.csv:######Type:LTR	All_elements	NA	27315	15973	8378	22596973	38.4177
+D5_new.fasta.out_D5_13.copynumber.csv:######Type:Unknown	All_elements	NA			NA		0.0000
+D5_new.fasta.out_D5_13.copynumber.csv:#########Type:EVERYTHING_TE	All_elements	NA	29377	17221	NA	24446187	41.5616

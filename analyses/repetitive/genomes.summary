@@ -1,0 +1,637 @@
+Genome	Chr	Family	Element	Length	Fragments	Copies	Solo_LTR	Total_Bp	Cover
+D5_new	Chr01	DNA/EnSpmCACTA	All_elements	NA	211	123	NA	356265	0.6290
+D5_new	Chr01	DNA/Harbinger	All_elements	NA	2	1	NA	863	0.0015
+D5_new	Chr01	DNA/L1	All_elements	NA	83	38	NA	104343	0.1842
+D5_new	Chr01	DNA/MarinerTc1	All_elements	NA	4	2	NA	3890	0.0069
+D5_new	Chr01	DNA/MuDR	All_elements	NA	1150	721	NA	975375	1.7220
+D5_new	Chr01	DNA/hAT	All_elements	NA	197	120	NA	62690	0.1107
+D5_new	Chr01	Type:DNA	All_elements	NA	1647	1005	NA	1503426	2.6543
+D5_new	Chr01	Type:LINE	All_elements	NA			NA		0.0000
+D5_new	Chr01	Type:SINE	All_elements	NA			NA		0.0000
+D5_new	Chr01	LTR	All_elements	NA	1	1	0	95	0.0002
+D5_new	Chr01	LTR/Copia	All_elements	NA	3854	2227	805	3717213	6.5626
+D5_new	Chr01	LTR/Gypsy	All_elements	NA	22118	12958	7079	17563728	31.0082
+D5_new	Chr01	Type:LTR	All_elements	NA	25973	15186	7884	21281036	37.5710
+D5_new	Chr01	Type:Unknown	All_elements	NA			NA		0.0000
+D5_new	Chr01	Type:EVERYTHING_TE	All_elements	NA	27620	16191	NA	22784462	40.2253
+D5_new	Chr02	DNA/EnSpmCACTA	All_elements	NA	212	125	NA	409236	0.8835
+D5_new	Chr02	DNA/Harbinger	All_elements	NA	2	1	NA	703	0.0015
+D5_new	Chr02	DNA/L1	All_elements	NA	62	32	NA	62437	0.1348
+D5_new	Chr02	DNA/MULE-MuDR	All_elements	NA	1	1	NA	95	0.0002
+D5_new	Chr02	DNA/MarinerTc1	All_elements	NA	5	2	NA	4101	0.0089
+D5_new	Chr02	DNA/MuDR	All_elements	NA	897	552	NA	802073	1.7315
+D5_new	Chr02	DNA/hAT	All_elements	NA	201	132	NA	69606	0.1503
+D5_new	Chr02	Type:DNA	All_elements	NA	1380	845	NA	1348251	2.9106
+D5_new	Chr02	Type:LINE	All_elements	NA			NA		0.0000
+D5_new	Chr02	Type:SINE	All_elements	NA			NA		0.0000
+D5_new	Chr02	LTR	All_elements	NA	10	10	0	933	0.0020
+D5_new	Chr02	LTR/Copia	All_elements	NA	3042	1800	724	2796245	6.0365
+D5_new	Chr02	LTR/Gypsy	All_elements	NA	18776	11000	6081	15460235	33.3755
+D5_new	Chr02	Type:LTR	All_elements	NA	21828	12810	6805	18257413	39.4140
+D5_new	Chr02	Type:Unknown	All_elements	NA			NA		0.0000
+D5_new	Chr02	Type:EVERYTHING_TE	All_elements	NA	23208	13655	NA	19605664	42.3246
+D5_new	Chr03	DNA/EnSpmCACTA	All_elements	NA	234	137	NA	426854	0.6772
+D5_new	Chr03	DNA/Harbinger	All_elements	NA	4	4	NA	4064	0.0064
+D5_new	Chr03	DNA/L1	All_elements	NA	93	45	NA	124092	0.1969
+D5_new	Chr03	DNA/MULE-MuDR	All_elements	NA	1	1	NA	95	0.0002
+D5_new	Chr03	DNA/MarinerTc1	All_elements	NA	8	4	NA	6049	0.0096
+D5_new	Chr03	DNA/MuDR	All_elements	NA	1069	663	NA	906117	1.4376
+D5_new	Chr03	DNA/PIF-Harbinger	All_elements	NA	2	1	NA	817	0.0013
+D5_new	Chr03	DNA/hAT	All_elements	NA	250	156	NA	86541	0.1373
+D5_new	Chr03	DNA/hAT-Tip100	All_elements	NA	2	1	NA	1314	0.0021
+D5_new	Chr03	Type:DNA	All_elements	NA	1663	1012	NA	1555943	2.4685
+D5_new	Chr03	Type:LINE	All_elements	NA			NA		0.0000
+D5_new	Chr03	Type:SINE	All_elements	NA			NA		0.0000
+D5_new	Chr03	LTR/Copia	All_elements	NA	4486	2608	1040	4353391	6.9067
+D5_new	Chr03	LTR/Gypsy	All_elements	NA	25299	14543	7853	20402299	32.3685
+D5_new	Chr03	Type:LTR	All_elements	NA	29785	17151	8893	24755690	39.2752
+D5_new	Chr03	Type:Unknown	All_elements	NA			NA		0.0000
+D5_new	Chr03	Type:EVERYTHING_TE	All_elements	NA	31448	18163	NA	26311633	41.7438
+D5_new	Chr04	DNA/EnSpmCACTA	All_elements	NA	229	127	NA	381502	0.7647
+D5_new	Chr04	DNA/L1	All_elements	NA	101	48	NA	104040	0.2086
+D5_new	Chr04	DNA/MarinerTc1	All_elements	NA	2	2	NA	1075	0.0022
+D5_new	Chr04	DNA/MuDR	All_elements	NA	1131	676	NA	1032045	2.0688
+D5_new	Chr04	DNA/hAT	All_elements	NA	170	108	NA	64330	0.1290
+D5_new	Chr04	DNA/hAT-Tip100	All_elements	NA	4	2	NA	4074	0.0082
+D5_new	Chr04	Type:DNA	All_elements	NA	1637	963	NA	1587066	3.1814
+D5_new	Chr04	Type:LINE	All_elements	NA			NA		0.0000
+D5_new	Chr04	Type:SINE	All_elements	NA			NA		0.0000
+D5_new	Chr04	LTR/Copia	All_elements	NA	3723	2167	868	3415785	6.8471
+D5_new	Chr04	LTR/Gypsy	All_elements	NA	19525	11326	6258	15811626	31.6953
+D5_new	Chr04	Type:LTR	All_elements	NA	23248	13493	7126	19227411	38.5424
+D5_new	Chr04	Type:Unknown	All_elements	NA			NA		0.0000
+D5_new	Chr04	Type:EVERYTHING_TE	All_elements	NA	24885	14456	NA	20814477	41.7238
+D5_new	Chr05	DNA/EnSpmCACTA	All_elements	NA	229	133	NA	324212	0.5708
+D5_new	Chr05	DNA/Harbinger	All_elements	NA	10	6	NA	4435	0.0078
+D5_new	Chr05	DNA/L1	All_elements	NA	109	57	NA	128781	0.2267
+D5_new	Chr05	DNA/MULE-MuDR	All_elements	NA	3	3	NA	285	0.0005
+D5_new	Chr05	DNA/MarinerTc1	All_elements	NA	5	2	NA	4059	0.0071
+D5_new	Chr05	DNA/MuDR	All_elements	NA	1020	664	NA	802006	1.4121
+D5_new	Chr05	DNA/PIF-Harbinger	All_elements	NA	7	3	NA	2195	0.0039
+D5_new	Chr05	DNA/hAT	All_elements	NA	297	200	NA	77301	0.1361
+D5_new	Chr05	DNA/hAT-Tip100	All_elements	NA	1	1	NA	879	0.0015
+D5_new	Chr05	Type:DNA	All_elements	NA	1681	1069	NA	1344153	2.3666
+D5_new	Chr05	Type:LINE	All_elements	NA			NA		0.0000
+D5_new	Chr05	Type:SINE	All_elements	NA			NA		0.0000
+D5_new	Chr05	LTR	All_elements	NA	25	25	0	2302	0.0041
+D5_new	Chr05	LTR/Copia	All_elements	NA	2769	1673	594	2458288	4.3282
+D5_new	Chr05	LTR/Gypsy	All_elements	NA	17956	10879	6549	12733252	22.4189
+D5_new	Chr05	Type:LTR	All_elements	NA	20750	12577	7143	15193842	26.7512
+D5_new	Chr05	Type:Unknown	All_elements	NA			NA		0.0000
+D5_new	Chr05	Type:EVERYTHING_TE	All_elements	NA	22431	13646	NA	16537995	29.1178
+D5_new	Chr06	DNA/EnSpmCACTA	All_elements	NA	255	156	NA	357624	0.5903
+D5_new	Chr06	DNA/Harbinger	All_elements	NA	4	3	NA	2307	0.0038
+D5_new	Chr06	DNA/L1	All_elements	NA	74	34	NA	71324	0.1177
+D5_new	Chr06	DNA/MarinerTc1	All_elements	NA	4	2	NA	4055	0.0067
+D5_new	Chr06	DNA/MuDR	All_elements	NA	1176	723	NA	1026914	1.6951
+D5_new	Chr06	DNA/hAT	All_elements	NA	174	96	NA	78028	0.1288
+D5_new	Chr06	DNA/hAT-Tip100	All_elements	NA	1	1	NA	2167	0.0036
+D5_new	Chr06	Type:DNA	All_elements	NA	1688	1015	NA	1542419	2.5461
+D5_new	Chr06	Type:LINE	All_elements	NA			NA		0.0000
+D5_new	Chr06	Type:SINE	All_elements	NA			NA		0.0000
+D5_new	Chr06	LTR	All_elements	NA	11	11	0	897	0.0015
+D5_new	Chr06	LTR/Copia	All_elements	NA	4426	2631	1046	4063310	6.7074
+D5_new	Chr06	LTR/Gypsy	All_elements	NA	24882	14235	7653	20253122	33.4322
+D5_new	Chr06	Type:LTR	All_elements	NA	29319	16877	8699	24317329	40.1410
+D5_new	Chr06	Type:Unknown	All_elements	NA			NA		0.0000
+D5_new	Chr06	Type:EVERYTHING_TE	All_elements	NA	31007	17892	NA	25859748	42.6871
+D5_new	Chr07	DNA/CMC-EnSpm	All_elements	NA	1	1	NA	116	0.0002
+D5_new	Chr07	DNA/EnSpmCACTA	All_elements	NA	242	146	NA	371251	0.7209
+D5_new	Chr07	DNA/Harbinger	All_elements	NA	3	3	NA	1573	0.0031
+D5_new	Chr07	DNA/L1	All_elements	NA	118	56	NA	125521	0.2437
+D5_new	Chr07	DNA/MarinerTc1	All_elements	NA	12	7	NA	8839	0.0172
+D5_new	Chr07	DNA/MuDR	All_elements	NA	1185	750	NA	941655	1.8286
+D5_new	Chr07	DNA/hAT	All_elements	NA	288	179	NA	89532	0.1739
+D5_new	Chr07	DNA/hAT-Tip100	All_elements	NA	2	1	NA	2020	0.0039
+D5_new	Chr07	Type:DNA	All_elements	NA	1851	1143	NA	1540507	2.9915
+D5_new	Chr07	Type:LINE	All_elements	NA			NA		0.0000
+D5_new	Chr07	Type:SINE	All_elements	NA			NA		0.0000
+D5_new	Chr07	LTR	All_elements	NA	4	4	0	369	0.0007
+D5_new	Chr07	LTR/Copia	All_elements	NA	3642	2153	936	3358380	6.5216
+D5_new	Chr07	LTR/Gypsy	All_elements	NA	18529	10775	6056	14623201	28.3968
+D5_new	Chr07	Type:LTR	All_elements	NA	22175	12932	6992	17981950	34.9192
+D5_new	Chr07	Type:Unknown	All_elements	NA			NA		0.0000
+D5_new	Chr07	Type:EVERYTHING_TE	All_elements	NA	24026	14075	NA	19522457	37.9107
+D5_new	Chr08	DNA/EnSpmCACTA	All_elements	NA	256	152	NA	411428	0.6661
+D5_new	Chr08	DNA/Harbinger	All_elements	NA	4	2	NA	2217	0.0036
+D5_new	Chr08	DNA/L1	All_elements	NA	64	36	NA	106114	0.1718
+D5_new	Chr08	DNA/MULE-MuDR	All_elements	NA	3	2	NA	776	0.0013
+D5_new	Chr08	DNA/MarinerTc1	All_elements	NA	6	3	NA	4175	0.0068
+D5_new	Chr08	DNA/MuDR	All_elements	NA	1193	743	NA	1048192	1.6971
+D5_new	Chr08	DNA/hAT	All_elements	NA	291	171	NA	95074	0.1539
+D5_new	Chr08	DNA/hAT-Tip100	All_elements	NA	2	1	NA	1028	0.0017
+D5_new	Chr08	Type:DNA	All_elements	NA	1819	1110	NA	1669004	2.7022
+D5_new	Chr08	Type:LINE	All_elements	NA			NA		0.0000
+D5_new	Chr08	Type:SINE	All_elements	NA			NA		0.0000
+D5_new	Chr08	LTR	All_elements	NA	57	51	0	4531	0.0073
+D5_new	Chr08	LTR/Copia	All_elements	NA	4018	2414	959	3643132	5.8983
+D5_new	Chr08	LTR/Gypsy	All_elements	NA	24496	14127	7752	19613756	31.7552
+D5_new	Chr08	Type:LTR	All_elements	NA	28571	16592	8711	23261419	37.6609
+D5_new	Chr08	Type:Unknown	All_elements	NA			NA		0.0000
+D5_new	Chr08	Type:EVERYTHING_TE	All_elements	NA	30390	17702	NA	24930423	40.3630
+D5_new	Chr08	Type:Satellite	All_elements	NA	NA	2	NA	206	0.0003
+D5_new	Chr09	DNA/CMC-EnSpm	All_elements	NA	1	1	NA	90	0.0002
+D5_new	Chr09	DNA/EnSpmCACTA	All_elements	NA	130	73	NA	255825	0.5849
+D5_new	Chr09	DNA/Harbinger	All_elements	NA	11	7	NA	4740	0.0108
+D5_new	Chr09	DNA/L1	All_elements	NA	90	45	NA	104535	0.2390
+D5_new	Chr09	DNA/MULE-MuDR	All_elements	NA	5	5	NA	455	0.0010
+D5_new	Chr09	DNA/MarinerTc1	All_elements	NA	3	2	NA	1983	0.0045
+D5_new	Chr09	DNA/MuDR	All_elements	NA	825	511	NA	717092	1.6396
+D5_new	Chr09	DNA/hAT	All_elements	NA	168	114	NA	52255	0.1195
+D5_new	Chr09	Type:DNA	All_elements	NA	1233	758	NA	1136975	2.5996
+D5_new	Chr09	Type:LINE	All_elements	NA			NA		0.0000
+D5_new	Chr09	Type:SINE	All_elements	NA			NA		0.0000
+D5_new	Chr09	LTR	All_elements	NA	41	40	0	3670	0.0084
+D5_new	Chr09	LTR/Copia	All_elements	NA	3133	1898	717	2598723	5.9418
+D5_new	Chr09	LTR/Gypsy	All_elements	NA	14341	8449	4871	10966034	25.0732
+D5_new	Chr09	Type:LTR	All_elements	NA	17515	10387	5588	13568427	31.0235
+D5_new	Chr09	Type:Unknown	All_elements	NA			NA		0.0000
+D5_new	Chr09	Type:EVERYTHING_TE	All_elements	NA	18748	11145	NA	14705402	33.6231
+D5_new	Chr10	DNA/EnSpmCACTA	All_elements	NA	350	196	NA	557389	0.8892
+D5_new	Chr10	DNA/Harbinger	All_elements	NA	6	5	NA	3075	0.0049
+D5_new	Chr10	DNA/L1	All_elements	NA	123	60	NA	145020	0.2313
+D5_new	Chr10	DNA/MarinerTc1	All_elements	NA	5	3	NA	4073	0.0065
+D5_new	Chr10	DNA/MuDR	All_elements	NA	1267	798	NA	1162585	1.8546
+D5_new	Chr10	DNA/hAT	All_elements	NA	199	123	NA	79121	0.1262
+D5_new	Chr10	DNA/hAT-Tip100	All_elements	NA	4	3	NA	3973	0.0063
+D5_new	Chr10	Type:DNA	All_elements	NA	1954	1188	NA	1955236	3.1191
+D5_new	Chr10	Type:LINE	All_elements	NA			NA		0.0000
+D5_new	Chr10	Type:SINE	All_elements	NA			NA		0.0000
+D5_new	Chr10	LTR	All_elements	NA	5	5	0	431	0.0007
+D5_new	Chr10	LTR/Copia	All_elements	NA	4175	2544	916	3986342	6.3592
+D5_new	Chr10	LTR/Gypsy	All_elements	NA	23262	13201	7254	18288099	29.1739
+D5_new	Chr10	Type:LTR	All_elements	NA	27442	15750	8170	22274872	35.5337
+D5_new	Chr10	Type:Unknown	All_elements	NA			NA		0.0000
+D5_new	Chr10	Type:EVERYTHING_TE	All_elements	NA	29396	16938	NA	24230108	38.6528
+D5_new	Chr11	DNA/EnSpmCACTA	All_elements	NA	306	188	NA	508156	0.7734
+D5_new	Chr11	DNA/Harbinger	All_elements	NA	3	2	NA	2094	0.0032
+D5_new	Chr11	DNA/L1	All_elements	NA	129	59	NA	150327	0.2288
+D5_new	Chr11	DNA/MULE-MuDR	All_elements	NA	1	1	NA	63	0.0001
+D5_new	Chr11	DNA/MarinerTc1	All_elements	NA	4	2	NA	3961	0.0060
+D5_new	Chr11	DNA/MuDR	All_elements	NA	1428	940	NA	1229450	1.8713
+D5_new	Chr11	DNA/PIF-Harbinger	All_elements	NA	2	1	NA	817	0.0012
+D5_new	Chr11	DNA/hAT	All_elements	NA	297	177	NA	86361	0.1314
+D5_new	Chr11	Type:DNA	All_elements	NA	2170	1370	NA	1981229	3.0155
+D5_new	Chr11	Type:LINE	All_elements	NA			NA		0.0000
+D5_new	Chr11	Type:SINE	All_elements	NA			NA		0.0000
+D5_new	Chr11	LTR	All_elements	NA	38	38	0	2951	0.0045
+D5_new	Chr11	LTR/Copia	All_elements	NA	4069	2409	807	3837831	5.8413
+D5_new	Chr11	LTR/Gypsy	All_elements	NA	22400	13100	7582	17594360	26.7791
+D5_new	Chr11	Type:LTR	All_elements	NA	26507	15547	8389	21435142	32.6248
+D5_new	Chr11	Type:Unknown	All_elements	NA			NA		0.0000
+D5_new	Chr11	Type:EVERYTHING_TE	All_elements	NA	28677	16917	NA	23416371	35.6403
+D5_new	Chr12	DNA/EnSpmCACTA	All_elements	NA	224	136	NA	378367	0.6589
+D5_new	Chr12	DNA/Harbinger	All_elements	NA	6	5	NA	3899	0.0068
+D5_new	Chr12	DNA/L1	All_elements	NA	72	35	NA	91882	0.1600
+D5_new	Chr12	DNA/MULE-MuDR	All_elements	NA	5	4	NA	518	0.0009
+D5_new	Chr12	DNA/MarinerTc1	All_elements	NA	10	6	NA	7993	0.0139
+D5_new	Chr12	DNA/MuDR	All_elements	NA	1235	764	NA	1080188	1.8812
+D5_new	Chr12	DNA/hAT	All_elements	NA	166	88	NA	56254	0.0980
+D5_new	Chr12	Type:DNA	All_elements	NA	1718	1038	NA	1619101	2.8197
+D5_new	Chr12	Type:LINE	All_elements	NA			NA		0.0000
+D5_new	Chr12	Type:SINE	All_elements	NA			NA		0.0000
+D5_new	Chr12	LTR	All_elements	NA	1	1	0	95	0.0002
+D5_new	Chr12	LTR/Copia	All_elements	NA	3553	2115	786	3210786	5.5916
+D5_new	Chr12	LTR/Gypsy	All_elements	NA	21778	12731	7491	17383371	30.2735
+D5_new	Chr12	Type:LTR	All_elements	NA	25332	14847	8277	20594252	35.8653
+D5_new	Chr12	Type:Unknown	All_elements	NA			NA		0.0000
+D5_new	Chr12	Type:EVERYTHING_TE	All_elements	NA	27050	15885	NA	22213353	38.6850
+D5_new	Chr13	DNA/EnSpmCACTA	All_elements	NA	294	172	NA	505404	0.8593
+D5_new	Chr13	DNA/Harbinger	All_elements	NA	3	2	NA	801	0.0014
+D5_new	Chr13	DNA/L1	All_elements	NA	138	73	NA	172767	0.2937
+D5_new	Chr13	DNA/MULE-MuDR	All_elements	NA	2	2	NA	190	0.0003
+D5_new	Chr13	DNA/MarinerTc1	All_elements	NA	8	3	NA	4545	0.0077
+D5_new	Chr13	DNA/MuDR	All_elements	NA	1252	775	NA	1063698	1.8084
+D5_new	Chr13	DNA/hAT	All_elements	NA	365	221	NA	101809	0.1731
+D5_new	Chr13	Type:DNA	All_elements	NA	2062	1248	NA	1849214	3.1439
+D5_new	Chr13	Type:LINE	All_elements	NA			NA		0.0000
+D5_new	Chr13	Type:SINE	All_elements	NA			NA		0.0000
+D5_new	Chr13	LTR	All_elements	NA	21	20	0	1775	0.0030
+D5_new	Chr13	LTR/Copia	All_elements	NA	4021	2393	898	3848288	6.5426
+D5_new	Chr13	LTR/Gypsy	All_elements	NA	23273	13560	7480	18746910	31.8721
+D5_new	Chr13	Type:LTR	All_elements	NA	27315	15973	8378	22596973	38.4177
+D5_new	Chr13	Type:Unknown	All_elements	NA			NA		0.0000
+D5_new	Chr13	Type:EVERYTHING_TE	All_elements	NA	29377	17221	NA	24446187	41.5616
+D5p	Chr01	DNA/CMC-EnSpm	All_elements	NA	1	1	NA	116	0.0002
+D5p	Chr01	DNA/EnSpmCACTA	All_elements	NA	280	142	NA	334780	0.5992
+D5p	Chr01	DNA/Harbinger	All_elements	NA	3	2	NA	1105	0.0020
+D5p	Chr01	DNA/L1	All_elements	NA	96	47	NA	112558	0.2015
+D5p	Chr01	DNA/MarinerTc1	All_elements	NA	12	6	NA	8832	0.0158
+D5p	Chr01	DNA/MuDR	All_elements	NA	1198	754	NA	930119	1.6648
+D5p	Chr01	DNA/hAT	All_elements	NA	249	148	NA	82124	0.1470
+D5p	Chr01	DNA/hAT-Tip100	All_elements	NA	2	1	NA	2020	0.0036
+D5p	Chr01	Type:DNA	All_elements	NA	1841	1101	NA	1471654	2.6342
+D5p	Chr01	Type:LINE	All_elements	NA			NA		0.0000
+D5p	Chr01	Type:SINE	All_elements	NA			NA		0.0000
+D5p	Chr01	LTR	All_elements	NA	11	11	0	1033	0.0018
+D5p	Chr01	LTR/Copia	All_elements	NA	3976	2350	1038	3605939	6.4544
+D5p	Chr01	LTR/Gypsy	All_elements	NA	20713	12063	6665	15909891	28.4775
+D5p	Chr01	Type:LTR	All_elements	NA	24700	14424	7703	19516863	34.9337
+D5p	Chr01	Type:Unknown	All_elements	NA			NA		0.0000
+D5p	Chr01	Type:EVERYTHING_TE	All_elements	NA	26541	15525	NA	20988517	37.5679
+D5p	Chr02	DNA/CMC-EnSpm	All_elements	NA	2	1	NA	88	0.0001
+D5p	Chr02	DNA/EnSpmCACTA	All_elements	NA	266	133	NA	350805	0.5589
+D5p	Chr02	DNA/L1	All_elements	NA	88	41	NA	109578	0.1746
+D5p	Chr02	DNA/MULE-MuDR	All_elements	NA	3	3	NA	285	0.0005
+D5p	Chr02	DNA/MarinerTc1	All_elements	NA	4	2	NA	3930	0.0063
+D5p	Chr02	DNA/MuDR	All_elements	NA	1192	744	NA	1021100	1.6267
+D5p	Chr02	DNA/PIF-Harbinger	All_elements	NA	2	1	NA	832	0.0013
+D5p	Chr02	DNA/hAT	All_elements	NA	221	136	NA	67329	0.1073
+D5p	Chr02	DNA/hAT-Tip100	All_elements	NA	2	1	NA	1513	0.0024
+D5p	Chr02	Type:DNA	All_elements	NA	1780	1062	NA	1555460	2.4781
+D5p	Chr02	Type:LINE	All_elements	NA			NA		0.0000
+D5p	Chr02	Type:SINE	All_elements	NA			NA		0.0000
+D5p	Chr02	LTR	All_elements	NA	25	25	0	2182	0.0035
+D5p	Chr02	LTR/Copia	All_elements	NA	4475	2556	926	4123606	6.5694
+D5p	Chr02	LTR/Gypsy	All_elements	NA	25714	14985	8316	20156285	32.1116
+D5p	Chr02	Type:LTR	All_elements	NA	30214	17566	9242	24282073	38.6846
+D5p	Chr02	Type:Unknown	All_elements	NA			NA		0.0000
+D5p	Chr02	Type:EVERYTHING_TE	All_elements	NA	31994	18628	NA	25837533	41.1626
+D5p	Chr03	DNA/EnSpmCACTA	All_elements	NA	220	109	NA	366127	0.8000
+D5p	Chr03	DNA/Harbinger	All_elements	NA	2	1	NA	703	0.0015
+D5p	Chr03	DNA/L1	All_elements	NA	56	30	NA	61742	0.1349
+D5p	Chr03	DNA/MULE-MuDR	All_elements	NA	1	1	NA	95	0.0002
+D5p	Chr03	DNA/MarinerTc1	All_elements	NA	5	2	NA	4061	0.0089
+D5p	Chr03	DNA/MuDR	All_elements	NA	901	556	NA	778999	1.7021
+D5p	Chr03	DNA/hAT	All_elements	NA	173	111	NA	58862	0.1286
+D5p	Chr03	Type:DNA	All_elements	NA	1358	810	NA	1270589	2.7763
+D5p	Chr03	Type:LINE	All_elements	NA			NA		0.0000
+D5p	Chr03	Type:SINE	All_elements	NA			NA		0.0000
+D5p	Chr03	LTR	All_elements	NA	34	34	0	2909	0.0064
+D5p	Chr03	LTR/Copia	All_elements	NA	2971	1724	698	2650617	5.7917
+D5p	Chr03	LTR/Gypsy	All_elements	NA	18979	10996	6118	15178446	33.1656
+D5p	Chr03	Type:LTR	All_elements	NA	21984	12754	6816	17831972	38.9637
+D5p	Chr03	Type:Unknown	All_elements	NA			NA		0.0000
+D5p	Chr03	Type:EVERYTHING_TE	All_elements	NA	23342	13564	NA	19102561	41.7400
+D5p	Chr04	DNA/CMC-EnSpm	All_elements	NA	6	2	NA	1362	0.0022
+D5p	Chr04	DNA/EnSpmCACTA	All_elements	NA	290	150	NA	374624	0.6025
+D5p	Chr04	DNA/Harbinger	All_elements	NA	4	2	NA	2217	0.0036
+D5p	Chr04	DNA/L1	All_elements	NA	76	42	NA	111754	0.1797
+D5p	Chr04	DNA/MULE-MuDR	All_elements	NA	3	2	NA	776	0.0012
+D5p	Chr04	DNA/MarinerTc1	All_elements	NA	6	3	NA	4175	0.0067
+D5p	Chr04	DNA/MuDR	All_elements	NA	1250	757	NA	1042664	1.6769
+D5p	Chr04	DNA/hAT	All_elements	NA	313	185	NA	101842	0.1638
+D5p	Chr04	DNA/hAT-Tag1	All_elements	NA	3	1	NA	1832	0.0029
+D5p	Chr04	DNA/hAT-Tip100	All_elements	NA	2	1	NA	1028	0.0017
+D5p	Chr04	Type:DNA	All_elements	NA	1953	1145	NA	1642274	2.6412
+D5p	Chr04	Type:LINE	All_elements	NA			NA		0.0000
+D5p	Chr04	Type:SINE	All_elements	NA			NA		0.0000
+D5p	Chr04	LTR	All_elements	NA	50	46	0	4052	0.0065
+D5p	Chr04	LTR/Copia	All_elements	NA	4137	2462	1019	3652576	5.8744
+D5p	Chr04	LTR/Gypsy	All_elements	NA	25134	14508	8106	19602746	31.5267
+D5p	Chr04	Type:LTR	All_elements	NA	29321	17016	9125	23259374	37.4076
+D5p	Chr04	Type:Unknown	All_elements	NA			NA		0.0000
+D5p	Chr04	Type:EVERYTHING_TE	All_elements	NA	31274	18161	NA	24901648	40.0488
+D5p	Chr04	Type:Satellite	All_elements	NA	NA	2	NA	206	0.0003
+D5p	Chr05	DNA/CMC-EnSpm	All_elements	NA	2	2	NA	124	0.0002
+D5p	Chr05	DNA/EnSpmCACTA	All_elements	NA	268	145	NA	394829	0.6156
+D5p	Chr05	DNA/Harbinger	All_elements	NA	2	2	NA	2188	0.0034
+D5p	Chr05	DNA/L1	All_elements	NA	93	44	NA	124790	0.1946
+D5p	Chr05	DNA/MULE-MuDR	All_elements	NA	2	2	NA	190	0.0003
+D5p	Chr05	DNA/MarinerTc1	All_elements	NA	7	4	NA	6080	0.0095
+D5p	Chr05	DNA/MuDR	All_elements	NA	1131	687	NA	920635	1.4353
+D5p	Chr05	DNA/hAT	All_elements	NA	269	173	NA	88678	0.1383
+D5p	Chr05	DNA/hAT-Tip100	All_elements	NA	4	2	NA	2093	0.0033
+D5p	Chr05	Type:DNA	All_elements	NA	1778	1061	NA	1539607	2.4004
+D5p	Chr05	Type:LINE	All_elements	NA			NA		0.0000
+D5p	Chr05	Type:SINE	All_elements	NA			NA		0.0000
+D5p	Chr05	LTR	All_elements	NA	1	1	0	95	0.0001
+D5p	Chr05	LTR/Copia	All_elements	NA	4777	2740	1061	4414066	6.8819
+D5p	Chr05	LTR/Gypsy	All_elements	NA	26041	15025	8252	20609492	32.1318
+D5p	Chr05	Type:LTR	All_elements	NA	30819	17766	9313	25023653	39.0139
+D5p	Chr05	Type:Unknown	All_elements	NA			NA		0.0000
+D5p	Chr05	Type:EVERYTHING_TE	All_elements	NA	32597	18827	NA	26563260	41.4142
+D5p	Chr06	DNA/EnSpmCACTA	All_elements	NA	204	101	NA	272328	0.5332
+D5p	Chr06	DNA/Harbinger	All_elements	NA	6	3	NA	2401	0.0047
+D5p	Chr06	DNA/L1	All_elements	NA	93	48	NA	106723	0.2090
+D5p	Chr06	DNA/MULE-MuDR	All_elements	NA	6	6	NA	567	0.0011
+D5p	Chr06	DNA/MarinerTc1	All_elements	NA	6	4	NA	4024	0.0079
+D5p	Chr06	DNA/MuDR	All_elements	NA	873	545	NA	768593	1.5048
+D5p	Chr06	DNA/PIF-Harbinger	All_elements	NA	2	1	NA	817	0.0016
+D5p	Chr06	DNA/hAT	All_elements	NA	192	122	NA	57916	0.1134
+D5p	Chr06	Type:DNA	All_elements	NA	1382	830	NA	1213369	2.3757
+D5p	Chr06	Type:LINE	All_elements	NA			NA		0.0000
+D5p	Chr06	Type:SINE	All_elements	NA			NA		0.0000
+D5p	Chr06	LTR	All_elements	NA	42	41	0	3765	0.0074
+D5p	Chr06	LTR/Copia	All_elements	NA	3629	2160	813	2995231	5.8644
+D5p	Chr06	LTR/Gypsy	All_elements	NA	18686	10971	6296	14376184	28.1475
+D5p	Chr06	Type:LTR	All_elements	NA	22357	13172	7109	17375180	34.0193
+D5p	Chr06	Type:Unknown	All_elements	NA			NA		0.0000
+D5p	Chr06	Type:EVERYTHING_TE	All_elements	NA	23739	14002	NA	18588549	36.3950
+D5p	Chr07	DNA/CMC-EnSpm	All_elements	NA	1	1	NA	90	0.0001
+D5p	Chr07	DNA/EnSpmCACTA	All_elements	NA	348	182	NA	454173	0.7448
+D5p	Chr07	DNA/Harbinger	All_elements	NA	5	4	NA	3385	0.0056
+D5p	Chr07	DNA/L1	All_elements	NA	125	57	NA	156429	0.2565
+D5p	Chr07	DNA/MULE-MuDR	All_elements	NA	3	2	NA	379	0.0006
+D5p	Chr07	DNA/MarinerTc1	All_elements	NA	4	2	NA	3961	0.0065
+D5p	Chr07	DNA/MuDR	All_elements	NA	1388	899	NA	1167389	1.9143
+D5p	Chr07	DNA/PIF-Harbinger	All_elements	NA	2	1	NA	859	0.0014
+D5p	Chr07	DNA/hAT	All_elements	NA	294	173	NA	78610	0.1289
+D5p	Chr07	Type:DNA	All_elements	NA	2170	1321	NA	1865275	3.0587
+D5p	Chr07	Type:LINE	All_elements	NA			NA		0.0000
+D5p	Chr07	Type:SINE	All_elements	NA			NA		0.0000
+D5p	Chr07	LTR	All_elements	NA	45	45	0	3522	0.0058
+D5p	Chr07	LTR/Copia	All_elements	NA	3933	2359	807	3571654	5.8569
+D5p	Chr07	LTR/Gypsy	All_elements	NA	19277	11286	6636	14424895	23.6542
+D5p	Chr07	Type:LTR	All_elements	NA	23255	13690	7443	18000071	29.5168
+D5p	Chr07	Type:Unknown	All_elements	NA			NA		0.0000
+D5p	Chr07	Type:EVERYTHING_TE	All_elements	NA	25425	15011	NA	19865346	32.5755
+D5p	Chr08	DNA/EnSpmCACTA	All_elements	NA	249	135	NA	354002	0.6197
+D5p	Chr08	DNA/Harbinger	All_elements	NA	4	4	NA	2854	0.0050
+D5p	Chr08	DNA/L1	All_elements	NA	81	38	NA	95871	0.1678
+D5p	Chr08	DNA/MULE-MuDR	All_elements	NA	3	3	NA	285	0.0005
+D5p	Chr08	DNA/MarinerTc1	All_elements	NA	11	6	NA	7932	0.0139
+D5p	Chr08	DNA/MuDR	All_elements	NA	1274	786	NA	1080001	1.8905
+D5p	Chr08	DNA/PIF-Harbinger	All_elements	NA	2	1	NA	862	0.0015
+D5p	Chr08	DNA/hAT	All_elements	NA	179	98	NA	60598	0.1061
+D5p	Chr08	DNA/hAT-Tag1	All_elements	NA	2	1	NA	1181	0.0021
+D5p	Chr08	DNA/hAT-Tip100	All_elements	NA	3	2	NA	2170	0.0038
+D5p	Chr08	Type:DNA	All_elements	NA	1808	1074	NA	1605756	2.8108
+D5p	Chr08	Type:LINE	All_elements	NA			NA		0.0000
+D5p	Chr08	Type:SINE	All_elements	NA			NA		0.0000
+D5p	Chr08	LTR	All_elements	NA	1	1	0	95	0.0002
+D5p	Chr08	LTR/Copia	All_elements	NA	3677	2167	812	3191707	5.5869
+D5p	Chr08	LTR/Gypsy	All_elements	NA	21593	12594	7461	16877530	29.5429
+D5p	Chr08	Type:LTR	All_elements	NA	25271	14762	8273	20069332	35.1300
+D5p	Chr08	Type:Unknown	All_elements	NA			NA		0.0000
+D5p	Chr08	Type:EVERYTHING_TE	All_elements	NA	27079	15836	NA	21675088	37.9407
+D5p	Chr09	DNA/CMC-EnSpm	All_elements	NA	2	2	NA	168	0.0002
+D5p	Chr09	DNA/EnSpmCACTA	All_elements	NA	343	181	NA	420415	0.5945
+D5p	Chr09	DNA/Harbinger	All_elements	NA	11	6	NA	5662	0.0080
+D5p	Chr09	DNA/L1	All_elements	NA	139	67	NA	158833	0.2246
+D5p	Chr09	DNA/MULE-MuDR	All_elements	NA	3	3	NA	285	0.0004
+D5p	Chr09	DNA/MarinerTc1	All_elements	NA	7	4	NA	5195	0.0073
+D5p	Chr09	DNA/MuDR	All_elements	NA	1363	847	NA	1075812	1.5214
+D5p	Chr09	DNA/PIF-Harbinger	All_elements	NA	2	1	NA	543	0.0008
+D5p	Chr09	DNA/hAT	All_elements	NA	322	214	NA	91331	0.1292
+D5p	Chr09	DNA/hAT-Tip100	All_elements	NA	1	1	NA	879	0.0012
+D5p	Chr09	Type:DNA	All_elements	NA	2193	1326	NA	1759123	2.4877
+D5p	Chr09	Type:LINE	All_elements	NA			NA		0.0000
+D5p	Chr09	Type:SINE	All_elements	NA			NA		0.0000
+D5p	Chr09	LTR	All_elements	NA	63	62	0	5600	0.0079
+D5p	Chr09	LTR/Copia	All_elements	NA	3927	2315	830	3437333	4.8610
+D5p	Chr09	LTR/Gypsy	All_elements	NA	24604	14723	8675	17795060	25.1652
+D5p	Chr09	Type:LTR	All_elements	NA	28594	17100	9505	21237993	30.0341
+D5p	Chr09	Type:Unknown	All_elements	NA			NA		0.0000
+D5p	Chr09	Type:EVERYTHING_TE	All_elements	NA	30787	18426	NA	22997116	32.5218
+D5p	Chr10	DNA/EnSpmCACTA	All_elements	NA	295	159	NA	336587	0.5414
+D5p	Chr10	DNA/Harbinger	All_elements	NA	5	4	NA	2203	0.0035
+D5p	Chr10	DNA/L1	All_elements	NA	89	45	NA	83415	0.1342
+D5p	Chr10	DNA/MarinerTc1	All_elements	NA	4	2	NA	4092	0.0066
+D5p	Chr10	DNA/MuDR	All_elements	NA	1229	725	NA	1032359	1.6604
+D5p	Chr10	DNA/PIF-Harbinger	All_elements	NA	4	2	NA	1782	0.0029
+D5p	Chr10	DNA/hAT	All_elements	NA	231	138	NA	88304	0.1420
+D5p	Chr10	DNA/hAT-Tip100	All_elements	NA	1	1	NA	2167	0.0035
+D5p	Chr10	Type:DNA	All_elements	NA	1858	1076	NA	1550909	2.4944
+D5p	Chr10	Type:LINE	All_elements	NA			NA		0.0000
+D5p	Chr10	Type:SINE	All_elements	NA			NA		0.0000
+D5p	Chr10	LTR	All_elements	NA	12	12	0	946	0.0015
+D5p	Chr10	LTR/Copia	All_elements	NA	4694	2782	1067	4164218	6.6976
+D5p	Chr10	LTR/Gypsy	All_elements	NA	26122	15038	8204	20626679	33.1751
+D5p	Chr10	Type:LTR	All_elements	NA	30828	17832	9271	24791843	39.8742
+D5p	Chr10	Type:Unknown	All_elements	NA			NA		0.0000
+D5p	Chr10	Type:EVERYTHING_TE	All_elements	NA	32686	18908	NA	26342752	42.3686
+D5p	Chr11	DNA/EnSpmCACTA	All_elements	NA	400	198	NA	523886	0.8358
+D5p	Chr11	DNA/L1	All_elements	NA	142	67	NA	157288	0.2509
+D5p	Chr11	DNA/MarinerTc1	All_elements	NA	9	5	NA	6120	0.0098
+D5p	Chr11	DNA/MuDR	All_elements	NA	1298	821	NA	1161375	1.8528
+D5p	Chr11	DNA/PIF-Harbinger	All_elements	NA	3	1	NA	859	0.0014
+D5p	Chr11	DNA/hAT	All_elements	NA	230	144	NA	87440	0.1395
+D5p	Chr11	DNA/hAT-Tip100	All_elements	NA	2	1	NA	1642	0.0026
+D5p	Chr11	Type:DNA	All_elements	NA	2084	1237	NA	1938610	3.0928
+D5p	Chr11	Type:LINE	All_elements	NA			NA		0.0000
+D5p	Chr11	Type:SINE	All_elements	NA			NA		0.0000
+D5p	Chr11	LTR	All_elements	NA	1	1	0	95	0.0002
+D5p	Chr11	LTR/Copia	All_elements	NA	4215	2507	928	3882194	6.1936
+D5p	Chr11	LTR/Gypsy	All_elements	NA	23662	13500	7500	18148439	28.9536
+D5p	Chr11	Type:LTR	All_elements	NA	27878	16008	8428	22030728	35.1474
+D5p	Chr11	Type:Unknown	All_elements	NA			NA		0.0000
+D5p	Chr11	Type:EVERYTHING_TE	All_elements	NA	29962	17245	NA	23969338	38.2402
+D5p	Chr12	DNA/EnSpmCACTA	All_elements	NA	164	82	NA	213654	0.6030
+D5p	Chr12	DNA/L1	All_elements	NA	86	42	NA	86256	0.2435
+D5p	Chr12	DNA/MuDR	All_elements	NA	829	503	NA	741298	2.0923
+D5p	Chr12	DNA/hAT	All_elements	NA	157	94	NA	47520	0.1341
+D5p	Chr12	DNA/hAT-Tip100	All_elements	NA	2	1	NA	1935	0.0055
+D5p	Chr12	Type:DNA	All_elements	NA	1238	722	NA	1090663	3.0784
+D5p	Chr12	Type:LINE	All_elements	NA			NA		0.0000
+D5p	Chr12	Type:SINE	All_elements	NA			NA		0.0000
+D5p	Chr12	LTR	All_elements	NA	4	4	0	380	0.0011
+D5p	Chr12	LTR/Copia	All_elements	NA	2684	1565	637	2389160	6.7433
+D5p	Chr12	LTR/Gypsy	All_elements	NA	11786	7002	4014	9254966	26.1219
+D5p	Chr12	Type:LTR	All_elements	NA	14474	8571	4651	11644506	32.8663
+D5p	Chr12	Type:Unknown	All_elements	NA			NA		0.0000
+D5p	Chr12	Type:EVERYTHING_TE	All_elements	NA	15712	9293	NA	12735169	35.9446
+D5p	Chr13	DNA/EnSpmCACTA	All_elements	NA	321	161	NA	478578	0.8206
+D5p	Chr13	DNA/L1	All_elements	NA	126	65	NA	169825	0.2912
+D5p	Chr13	DNA/MULE-MuDR	All_elements	NA	1	1	NA	95	0.0002
+D5p	Chr13	DNA/MarinerTc1	All_elements	NA	9	3	NA	4620	0.0079
+D5p	Chr13	DNA/MuDR	All_elements	NA	1219	757	NA	1006323	1.7255
+D5p	Chr13	DNA/hAT	All_elements	NA	355	217	NA	106747	0.1830
+D5p	Chr13	Type:DNA	All_elements	NA	2031	1204	NA	1766188	3.0284
+D5p	Chr13	Type:LINE	All_elements	NA			NA		0.0000
+D5p	Chr13	Type:SINE	All_elements	NA			NA		0.0000
+D5p	Chr13	LTR	All_elements	NA	22	21	0	1878	0.0032
+D5p	Chr13	LTR/Copia	All_elements	NA	3898	2278	868	3646338	6.2522
+D5p	Chr13	LTR/Gypsy	All_elements	NA	23293	13604	7605	18528567	31.7699
+D5p	Chr13	Type:LTR	All_elements	NA	27213	15903	8473	22176783	38.0253
+D5p	Chr13	Type:Unknown	All_elements	NA			NA		0.0000
+D5p	Chr13	Type:EVERYTHING_TE	All_elements	NA	29244	17107	NA	23942971	41.0537
+D10	Chr01	DNA/EnSpmCACTA	All_elements	NA	234	133	NA	367999	0.6088
+D10	Chr01	DNA/L1	All_elements	NA	69	39	NA	92290	0.1527
+D10	Chr01	DNA/MULE-MuDR	All_elements	NA	3	3	NA	285	0.0005
+D10	Chr01	DNA/MarinerTc1	All_elements	NA	4	2	NA	4029	0.0067
+D10	Chr01	DNA/MuDR	All_elements	NA	1077	669	NA	934603	1.5462
+D10	Chr01	DNA/hAT	All_elements	NA	164	101	NA	56443	0.0934
+D10	Chr01	Type:DNA	All_elements	NA	1551	947	NA	1455649	2.4082
+D10	Chr01	Type:LINE	All_elements	NA			NA		0.0000
+D10	Chr01	Type:SINE	All_elements	NA			NA		0.0000
+D10	Chr01	LTR	All_elements	NA	24	24	0	2126	0.0035
+D10	Chr01	LTR/Copia	All_elements	NA	3936	2346	861	3858292	6.3831
+D10	Chr01	LTR/Gypsy	All_elements	NA	24271	14322	7381	19558771	32.3578
+D10	Chr01	Type:LTR	All_elements	NA	28231	16692	8242	23419189	38.7444
+D10	Chr01	Type:Unknown	All_elements	NA			NA		0.0000
+D10	Chr01	Type:EVERYTHING_TE	All_elements	NA	29782	17639	NA	24874838	41.1526
+D10	Chr02	DNA/EnSpmCACTA	All_elements	NA	153	92	NA	247132	0.4887
+D10	Chr02	DNA/Harbinger	All_elements	NA	4	2	NA	1287	0.0025
+D10	Chr02	DNA/L1	All_elements	NA	88	44	NA	96543	0.1909
+D10	Chr02	DNA/MarinerTc1	All_elements	NA	8	4	NA	3949	0.0078
+D10	Chr02	DNA/MuDR	All_elements	NA	912	568	NA	847871	1.6766
+D10	Chr02	DNA/hAT	All_elements	NA	137	86	NA	65836	0.1302
+D10	Chr02	Type:DNA	All_elements	NA	1302	796	NA	1262618	2.4968
+D10	Chr02	Type:LINE	All_elements	NA			NA		0.0000
+D10	Chr02	Type:SINE	All_elements	NA			NA		0.0000
+D10	Chr02	LTR	All_elements	NA	20	20	0	1745	0.0035
+D10	Chr02	LTR/Copia	All_elements	NA	3140	1833	748	2920430	5.7750
+D10	Chr02	LTR/Gypsy	All_elements	NA	20911	12259	6478	17580319	34.7641
+D10	Chr02	Type:LTR	All_elements	NA	24071	14112	7226	20502494	40.5426
+D10	Chr02	Type:Unknown	All_elements	NA			NA		0.0000
+D10	Chr02	Type:EVERYTHING_TE	All_elements	NA	25373	14908	NA	21765112	43.0393
+D10	Chr03	DNA/EnSpmCACTA	All_elements	NA	214	116	NA	341271	0.5258
+D10	Chr03	DNA/Harbinger	All_elements	NA	1	1	NA	729	0.0011
+D10	Chr03	DNA/L1	All_elements	NA	113	58	NA	137014	0.2111
+D10	Chr03	DNA/MarinerTc1	All_elements	NA	10	5	NA	7664	0.0118
+D10	Chr03	DNA/MuDR	All_elements	NA	983	606	NA	876230	1.3499
+D10	Chr03	DNA/PIF-Harbinger	All_elements	NA	2	1	NA	947	0.0015
+D10	Chr03	DNA/hAT	All_elements	NA	207	124	NA	88721	0.1367
+D10	Chr03	DNA/hAT-Tip100	All_elements	NA	4	2	NA	4391	0.0068
+D10	Chr03	Type:DNA	All_elements	NA	1534	913	NA	1456967	2.2446
+D10	Chr03	Type:LINE	All_elements	NA			NA		0.0000
+D10	Chr03	Type:SINE	All_elements	NA			NA		0.0000
+D10	Chr03	LTR/Copia	All_elements	NA	4498	2601	1042	4289473	6.6084
+D10	Chr03	LTR/Gypsy	All_elements	NA	26440	15330	8373	21567807	33.2273
+D10	Chr03	Type:LTR	All_elements	NA	30938	17931	9415	25857280	39.8357
+D10	Chr03	Type:Unknown	All_elements	NA			NA		0.0000
+D10	Chr03	Type:EVERYTHING_TE	All_elements	NA	32472	18844	NA	27314247	42.0803
+D10	Chr04	DNA/EnSpmCACTA	All_elements	NA	156	88	NA	236706	0.4507
+D10	Chr04	DNA/L1	All_elements	NA	92	48	NA	113385	0.2159
+D10	Chr04	DNA/MarinerTc1	All_elements	NA	2	2	NA	1189	0.0023
+D10	Chr04	DNA/MuDR	All_elements	NA	1032	639	NA	919116	1.7500
+D10	Chr04	DNA/hAT	All_elements	NA	217	133	NA	72000	0.1371
+D10	Chr04	DNA/hAT-Tip100	All_elements	NA	4	2	NA	4674	0.0089
+D10	Chr04	Type:DNA	All_elements	NA	1503	912	NA	1347070	2.5648
+D10	Chr04	Type:LINE	All_elements	NA			NA		0.0000
+D10	Chr04	Type:SINE	All_elements	NA			NA		0.0000
+D10	Chr04	LTR/Copia	All_elements	NA	3801	2223	875	3553377	6.7656
+D10	Chr04	LTR/Gypsy	All_elements	NA	21286	12552	6671	17286051	32.9123
+D10	Chr04	Type:LTR	All_elements	NA	25087	14775	7546	20839428	39.6779
+D10	Chr04	Type:Unknown	All_elements	NA			NA		0.0000
+D10	Chr04	Type:EVERYTHING_TE	All_elements	NA	26590	15687	NA	22186498	42.2427
+D10	Chr05	DNA/EnSpmCACTA	All_elements	NA	160	94	NA	219152	0.3625
+D10	Chr05	DNA/Harbinger	All_elements	NA	12	8	NA	5868	0.0097
+D10	Chr05	DNA/L1	All_elements	NA	84	41	NA	74870	0.1238
+D10	Chr05	DNA/MarinerTc1	All_elements	NA	6	4	NA	4051	0.0067
+D10	Chr05	DNA/MuDR	All_elements	NA	909	607	NA	692006	1.1445
+D10	Chr05	DNA/PIF-Harbinger	All_elements	NA	2	1	NA	903	0.0015
+D10	Chr05	DNA/hAT	All_elements	NA	266	181	NA	83468	0.1380
+D10	Chr05	DNA/hAT-Tip100	All_elements	NA	5	3	NA	4678	0.0077
+D10	Chr05	Type:DNA	All_elements	NA	1444	939	NA	1084996	1.7944
+D10	Chr05	Type:LINE	All_elements	NA			NA		0.0000
+D10	Chr05	Type:SINE	All_elements	NA			NA		0.0000
+D10	Chr05	LTR	All_elements	NA	39	37	0	3417	0.0057
+D10	Chr05	LTR/Copia	All_elements	NA	2767	1641	581	2524015	4.1744
+D10	Chr05	LTR/Gypsy	All_elements	NA	19743	12005	7132	14318369	23.6808
+D10	Chr05	Type:LTR	All_elements	NA	22549	13683	7713	16845801	27.8608
+D10	Chr05	Type:Unknown	All_elements	NA			NA		0.0000
+D10	Chr05	Type:EVERYTHING_TE	All_elements	NA	23993	14622	NA	17930797	29.6553
+D10	Chr06	DNA/EnSpmCACTA	All_elements	NA	153	81	NA	230269	0.3837
+D10	Chr06	DNA/L1	All_elements	NA	71	34	NA	98993	0.1650
+D10	Chr06	DNA/MarinerTc1	All_elements	NA	2	1	NA	2042	0.0034
+D10	Chr06	DNA/MuDR	All_elements	NA	1078	660	NA	929096	1.5483
+D10	Chr06	DNA/hAT	All_elements	NA	104	67	NA	52098	0.0868
+D10	Chr06	DNA/hAT-Tip100	All_elements	NA	8	4	NA	6786	0.0113
+D10	Chr06	Type:DNA	All_elements	NA	1416	847	NA	1319284	2.1985
+D10	Chr06	Type:LINE	All_elements	NA			NA		0.0000
+D10	Chr06	Type:SINE	All_elements	NA			NA		0.0000
+D10	Chr06	LTR/Copia	All_elements	NA	4201	2472	976	4001924	6.6690
+D10	Chr06	LTR/Gypsy	All_elements	NA	24869	14430	7653	20137786	33.5587
+D10	Chr06	Type:LTR	All_elements	NA	29070	16902	8629	24139710	40.2277
+D10	Chr06	Type:Unknown	All_elements	NA			NA		0.0000
+D10	Chr06	Type:EVERYTHING_TE	All_elements	NA	30486	17749	NA	25458994	42.4262
+D10	Chr07	DNA/EnSpmCACTA	All_elements	NA	217	130	NA	300019	0.5582
+D10	Chr07	DNA/Harbinger	All_elements	NA	2	2	NA	723	0.0013
+D10	Chr07	DNA/L1	All_elements	NA	125	61	NA	155898	0.2901
+D10	Chr07	DNA/MarinerTc1	All_elements	NA	14	7	NA	9263	0.0172
+D10	Chr07	DNA/MuDR	All_elements	NA	1031	654	NA	823365	1.5319
+D10	Chr07	DNA/hAT	All_elements	NA	224	134	NA	82336	0.1532
+D10	Chr07	Type:DNA	All_elements	NA	1613	988	NA	1371604	2.5519
+D10	Chr07	Type:LINE	All_elements	NA			NA		0.0000
+D10	Chr07	Type:SINE	All_elements	NA			NA		0.0000
+D10	Chr07	LTR	All_elements	NA	1	1	0	95	0.0002
+D10	Chr07	LTR/Copia	All_elements	NA	3756	2219	929	3536396	6.5796
+D10	Chr07	LTR/Gypsy	All_elements	NA	19357	11511	6360	15130135	28.1504
+D10	Chr07	Type:LTR	All_elements	NA	23114	13731	7289	18666626	34.7302
+D10	Chr07	Type:Unknown	All_elements	NA			NA		0.0000
+D10	Chr07	Type:EVERYTHING_TE	All_elements	NA	24727	14719	NA	20038230	37.2821
+D10	Chr08	DNA/EnSpmCACTA	All_elements	NA	177	100	NA	342948	0.5566
+D10	Chr08	DNA/Harbinger	All_elements	NA	2	1	NA	751	0.0012
+D10	Chr08	DNA/L1	All_elements	NA	110	61	NA	145773	0.2366
+D10	Chr08	DNA/MULE-MuDR	All_elements	NA	2	1	NA	986	0.0016
+D10	Chr08	DNA/MarinerTc1	All_elements	NA	13	7	NA	6733	0.0109
+D10	Chr08	DNA/MuDR	All_elements	NA	1269	797	NA	1112162	1.8049
+D10	Chr08	DNA/hAT	All_elements	NA	269	171	NA	96277	0.1562
+D10	Chr08	Type:DNA	All_elements	NA	1842	1138	NA	1705630	2.7681
+D10	Chr08	Type:LINE	All_elements	NA			NA		0.0000
+D10	Chr08	Type:SINE	All_elements	NA			NA		0.0000
+D10	Chr08	LTR	All_elements	NA	16	14	0	1219	0.0020
+D10	Chr08	LTR/Copia	All_elements	NA	4092	2351	984	3778130	6.1316
+D10	Chr08	LTR/Gypsy	All_elements	NA	24682	14560	7934	19852034	32.2181
+D10	Chr08	Type:LTR	All_elements	NA	28790	16925	8918	23631383	38.3516
+D10	Chr08	Type:Unknown	All_elements	NA			NA		0.0000
+D10	Chr08	Type:EVERYTHING_TE	All_elements	NA	30632	18063	NA	25337013	41.1197
+D10	Chr09	DNA/EnSpmCACTA	All_elements	NA	100	54	NA	177625	0.4064
+D10	Chr09	DNA/Harbinger	All_elements	NA	3	3	NA	1178	0.0027
+D10	Chr09	DNA/L1	All_elements	NA	64	30	NA	74231	0.1699
+D10	Chr09	DNA/MarinerTc1	All_elements	NA	6	4	NA	4030	0.0092
+D10	Chr09	DNA/MuDR	All_elements	NA	637	420	NA	550025	1.2586
+D10	Chr09	DNA/hAT	All_elements	NA	168	110	NA	51854	0.1187
+D10	Chr09	Type:DNA	All_elements	NA	978	621	NA	858943	1.9654
+D10	Chr09	Type:LINE	All_elements	NA			NA		0.0000
+D10	Chr09	Type:SINE	All_elements	NA			NA		0.0000
+D10	Chr09	LTR	All_elements	NA	33	33	0	2961	0.0068
+D10	Chr09	LTR/Copia	All_elements	NA	2712	1606	654	2527875	5.7842
+D10	Chr09	LTR/Gypsy	All_elements	NA	14631	8671	4833	11497588	26.3086
+D10	Chr09	Type:LTR	All_elements	NA	17376	10310	5487	14028424	32.0996
+D10	Chr09	Type:Unknown	All_elements	NA			NA		0.0000
+D10	Chr09	Type:EVERYTHING_TE	All_elements	NA	18354	10931	NA	14887367	34.0650
+D10	Chr10	DNA/EnSpmCACTA	All_elements	NA	296	168	NA	538725	0.8433
+D10	Chr10	DNA/L1	All_elements	NA	101	48	NA	125315	0.1962
+D10	Chr10	DNA/MarinerTc1	All_elements	NA	7	4	NA	6069	0.0095
+D10	Chr10	DNA/MuDR	All_elements	NA	1114	718	NA	1006986	1.5763
+D10	Chr10	DNA/hAT	All_elements	NA	189	125	NA	75928	0.1189
+D10	Chr10	DNA/hAT-Tip100	All_elements	NA	4	2	NA	2569	0.0040
+D10	Chr10	Type:DNA	All_elements	NA	1711	1065	NA	1755592	2.7482
+D10	Chr10	Type:LINE	All_elements	NA			NA		0.0000
+D10	Chr10	Type:SINE	All_elements	NA			NA		0.0000
+D10	Chr10	LTR/Copia	All_elements	NA	4224	2505	935	4090400	6.4031
+D10	Chr10	LTR/Gypsy	All_elements	NA	24323	14135	7735	19044097	29.8115
+D10	Chr10	Type:LTR	All_elements	NA	28547	16640	8670	23134497	36.2146
+D10	Chr10	Type:Unknown	All_elements	NA			NA		0.0000
+D10	Chr10	Type:EVERYTHING_TE	All_elements	NA	30258	17705	NA	24890089	38.9627
+D10	Chr11	DNA/CMC-EnSpm	All_elements	NA	2	1	NA	115	0.0002
+D10	Chr11	DNA/EnSpmCACTA	All_elements	NA	222	133	NA	339080	0.5008
+D10	Chr11	DNA/Harbinger	All_elements	NA	3	3	NA	2050	0.0030
+D10	Chr11	DNA/L1	All_elements	NA	154	72	NA	185183	0.2735
+D10	Chr11	DNA/MULE-MuDR	All_elements	NA	47	46	NA	4471	0.0066
+D10	Chr11	DNA/MarinerTc1	All_elements	NA	5	3	NA	4061	0.0060
+D10	Chr11	DNA/MuDR	All_elements	NA	1387	889	NA	1179517	1.7422
+D10	Chr11	DNA/hAT	All_elements	NA	286	173	NA	88354	0.1305
+D10	Chr11	Type:DNA	All_elements	NA	2106	1320	NA	1802831	2.6628
+D10	Chr11	Type:LINE	All_elements	NA			NA		0.0000
+D10	Chr11	Type:SINE	All_elements	NA			NA		0.0000
+D10	Chr11	LTR	All_elements	NA	44	42	0	3788	0.0056
+D10	Chr11	LTR/Copia	All_elements	NA	3902	2295	831	3761018	5.5551
+D10	Chr11	LTR/Gypsy	All_elements	NA	24149	14345	8206	19072178	28.1698
+D10	Chr11	Type:LTR	All_elements	NA	28095	16682	9037	22836984	33.7305
+D10	Chr11	Type:Unknown	All_elements	NA			NA		0.0000
+D10	Chr11	Type:EVERYTHING_TE	All_elements	NA	30201	18002	NA	24639815	36.3933
+D10	Chr12	DNA/EnSpmCACTA	All_elements	NA	156	81	NA	241599	0.4428
+D10	Chr12	DNA/L1	All_elements	NA	64	32	NA	88797	0.1628
+D10	Chr12	DNA/MarinerTc1	All_elements	NA	11	5	NA	6937	0.0127
+D10	Chr12	DNA/MuDR	All_elements	NA	965	619	NA	780816	1.4312
+D10	Chr12	DNA/hAT	All_elements	NA	139	89	NA	68078	0.1248
+D10	Chr12	DNA/hAT-Tip100	All_elements	NA	3	2	NA	2220	0.0041
+D10	Chr12	Type:DNA	All_elements	NA	1338	828	NA	1188447	2.1784
+D10	Chr12	Type:LINE	All_elements	NA			NA		0.0000
+D10	Chr12	Type:SINE	All_elements	NA			NA		0.0000
+D10	Chr12	LTR	All_elements	NA	11	11	0	993	0.0018
+D10	Chr12	LTR/Copia	All_elements	NA	3145	1871	709	2884437	5.2870
+D10	Chr12	LTR/Gypsy	All_elements	NA	20957	12456	7122	16873274	30.9279
+D10	Chr12	Type:LTR	All_elements	NA	24113	14338	7831	19758704	36.2168
+D10	Chr12	Type:Unknown	All_elements	NA			NA		0.0000
+D10	Chr12	Type:EVERYTHING_TE	All_elements	NA	25451	15166	NA	20947151	38.3952
+D10	Chr13	DNA/EnSpmCACTA	All_elements	NA	205	115	NA	335390	0.5492
+D10	Chr13	DNA/Harbinger	All_elements	NA	3	2	NA	1329	0.0022
+D10	Chr13	DNA/L1	All_elements	NA	120	70	NA	169077	0.2768
+D10	Chr13	DNA/MarinerTc1	All_elements	NA	10	3	NA	5555	0.0091
+D10	Chr13	DNA/MuDR	All_elements	NA	1196	746	NA	1062649	1.7399
+D10	Chr13	DNA/hAT	All_elements	NA	325	202	NA	98885	0.1619
+D10	Chr13	DNA/hAT-Tip100	All_elements	NA	2	1	NA	1973	0.0032
+D10	Chr13	Type:DNA	All_elements	NA	1861	1139	NA	1674858	2.7424
+D10	Chr13	Type:LINE	All_elements	NA			NA		0.0000
+D10	Chr13	Type:SINE	All_elements	NA			NA		0.0000
+D10	Chr13	LTR	All_elements	NA	36	34	0	2969	0.0049
+D10	Chr13	LTR/Copia	All_elements	NA	3924	2331	943	3784189	6.1961
+D10	Chr13	LTR/Gypsy	All_elements	NA	24703	14586	7928	20271164	33.1913
+D10	Chr13	Type:LTR	All_elements	NA	28663	16951	8871	24058322	39.3923
+D10	Chr13	Type:Unknown	All_elements	NA			NA		0.0000
+D10	Chr13	Type:EVERYTHING_TE	All_elements	NA	30524	18090	NA	25733180	42.1346
