@@ -1,0 +1,102 @@
+#+TITLE: Annotation
+#+DRAWERS: HIDDEN
+#+OPTIONS: d:RESULTS ^:nil
+#+STARTUP: hideblocks align
+#+PROPERTY:  header-args :exports results :eval never-export :mkdirp yes  :var DIR=(file-name-directory buffer-file-name) 
+
+#+BEGIN_COMMENT
+The genomes table sets-up the annotation pipeline. Name is the output prefix,
+Path is the path to the original fasta file relative to this README, Rename
+indicates whether the fasta headers need to be renamed (0 or 1), and Filter is
+the minimum contig length (0 for no filtering)
+#+END_COMMENT
+#+NAME: genomes
+| Name  | Path                                   | Rename | Filter |
+|-------+----------------------------------------+--------+--------|
+| D5.v1 | genomes/raimondii.juiced_V1.0.fasta.gz |      0 |      0 |
+
+#+BEGIN_COMMENT
+The RNA table is used to specify RNA-seq libraries. Name should match an entry
+in the genome table. Forward should be the path relative to this README for the
+R1 file. If multiple libraries are available for a genome, then
+separate the file names by a comma (no spaces). Reverse is the relative path for
+the R2 file[s]. This column should be in the same order as the Forward column if
+multiple libraries are given. Reverse column is left blank if the library is
+single-end.
+#+END_COMMENT
+#+NAME: RNA
+| Name  | Forward                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Reverse                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| D5.v1 | RNA-seq/D5/LD7-D5-L1_1.fq.gz,RNA-seq/D5/LD7-D5-L2_1.fq.gz,RNA-seq/D5/LD7-D5-L3_1.fq.gz,RNA-seq/D5/LD9-D5-L1_1.fq.gz,RNA-seq/D5/LD9-D5-L2_1.fq.gz,RNA-seq/D5/LD9-D5-L3_1.fq.gz,RNA-seq/D5/LDM-D5-L1_1.fq.gz,RNA-seq/D5/LDM-D5-L2_1.fq.gz,RNA-seq/D5/LDM-D5-L2-209_L1_1.fq.gz,RNA-seq/D5/LDM-D5-L3_1.fq.gz,RNA-seq/D5/SD5-D5-S1_1.fq.gz,RNA-seq/D5/SD5-D5-S3_1.fq.gz,RNA-seq/D5/SD7-D5-S1_1.fq.gz,RNA-seq/D5/SD7-D5-S2_1.fq.gz,RNA-seq/D5/SD7-D5-S3_1.fq.gz,RNA-seq/D5/SDM-D5-S1_1.fq.gz,RNA-seq/D5/SDM-D5-S2_1.fq.gz,RNA-seq/D5/SDP9-D5-S1_1.fq.gz,RNA-seq/D5/SDP9-D5-S2_1.fq.gz,RNA-seq/D5/SDP9-D5-S3_1.fq.gz,RNA-seq/D5/SDPF-D5-S1_1.fq.gz,RNA-seq/D5/SDPF-D5-S2_1.fq.gz,RNA-seq/D5/SDPF-D5-S3_1.fq.gz | RNA-seq/D5/LD7-D5-L1_2.fq.gz,RNA-seq/D5/LD7-D5-L2_2.fq.gz,RNA-seq/D5/LD7-D5-L3_2.fq.gz,RNA-seq/D5/LD9-D5-L1_2.fq.gz,RNA-seq/D5/LD9-D5-L2_2.fq.gz,RNA-seq/D5/LD9-D5-L3_2.fq.gz,RNA-seq/D5/LDM-D5-L1_2.fq.gz,RNA-seq/D5/LDM-D5-L2-209_L1_2.fq.gz,RNA-seq/D5/LDM-D5-L2_2.fq.gz,RNA-seq/D5/LDM-D5-L3_2.fq.gz,RNA-seq/D5/SD5-D5-S1_2.fq.gz,RNA-seq/D5/SD5-D5-S3_2.fq.gz,RNA-seq/D5/SD7-D5-S1_2.fq.gz,RNA-seq/D5/SD7-D5-S2_2.fq.gz,RNA-seq/D5/SD7-D5-S3_2.fq.gz,RNA-seq/D5/SDM-D5-S1_2.fq.gz,RNA-seq/D5/SDM-D5-S2_2.fq.gz,RNA-seq/D5/SDP9-D5-S1_2.fq.gz,RNA-seq/D5/SDP9-D5-S2_2.fq.gz,RNA-seq/D5/SDP9-D5-S3_2.fq.gz,RNA-seq/D5/SDPF-D5-S1_2.fq.gz,RNA-seq/D5/SDPF-D5-S2_2.fq.gz,RNA-seq/D5/SDPF-D5-S3_2.fq.gz |
+
+
+#+BEGIN_SRC sh :tangle augustus/setup.sh
+cd $DIR
+
+cp -r /usr/local/igbb/augustus-3.2.3/config/             $DIR/augustus/
+ln -s /usr/local/igbb/augustus-3.2.3/bin/                $DIR/augustus/
+ln -s /usr/local/igbb/augustus-3.2.3/include/            $DIR/augustus/
+cp -r /usr/local/igbb/augustus-3.2.3/scripts/            $DIR/augustus/
+cp    /usr/local/igbb/augustus-3.0.3/scripts/autoAug.pl  $DIR/augustus/scripts/
+
+
+#+END_SRC
+#+BEGIN_SRC sh :var genomes=genomes :tangle genomes/filter.sh
+cd $DIR
+ROOT=$(git rev-parse --show-toplevel)
+
+PATH=$PATH:$DIR/augustus/scripts
+
+for name in "${!genomes[@]}"; do
+    readarray -t lib <<< "${genomes[$name]}"
+
+    if [ ${lib[1]} -ne 0 ]; then
+    pv "$DIR/${lib[0]}" | zcat |
+      awk 'BEGIN {count=1}
+            /^>/ {printf ">%s_%d\n", name, count++}
+           !/^>/ {print}' name="${name}"  > "$DIR/genomes/$name.fa"
+    else
+        pv "$DIR/${lib[0]}" | zcat > "$DIR/genomes/$name.fa"
+    fi
+
+    mkdir $DIR/genomes/$name/
+
+    if [ ${lib[2]} -ne 0 ]; then
+        /home/maa146/bin/fasta_filter.pl "$DIR/${name}.fa" --length=${lib[2]} > "$DIR/genomes/${name}/filtered.fa"
+    else
+        ln -s "$DIR/genomes/$name.fa" "$DIR/genomes/$name/filtered.fa" 
+    fi
+
+    splitMfasta.pl --minsize=1000000 --outputpath="$DIR/genomes/$name/" "$DIR/genomes/$name/filtered.fa"
+
+done
+
+#+END_SRC
+
+* RepeatMasker
+#+HEADER: :prologue #PBS -N repeatmasker -l walltime=48:00:00
+#+BEGIN_SRC sh :var libs=RNA[,0] :tangle RM/run.sh
+cd $DIR
+ROOT=$(git rev-parse --show-toplevel)
+
+[ -z $name ] && exit
+mkdir -p $DIR/RM/$name/$PBS_ARRAYID
+
+ml igbb repeatmasker/4.0.7
+
+RepeatMasker -pa $PBS_NUM_PPN -s -nolow -xsmall \
+             -lib $DIR/RM/cottonRB23.04.fa \
+             -no_is -frag 500000 -nocut -noisy -dir $DIR/RM/$name/$PBS_ARRAYID -html -gff \
+             "$DIR/genomes/$name/filtered.split.$PBS_ARRAYID.fa"
+#+END_SRC
+
+#+BEGIN_SRC sh
+cd $DIR
+ROOT=$(git rev-parse --show-toplevel)
+
+[ -z $name ] && exit
+
+
+cat $DIR/RM/$name/*/$name.part-??.fa.masked > $DIR/RM/$name.softmask.fa
+
+#+END_SRC
