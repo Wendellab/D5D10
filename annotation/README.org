@@ -90,7 +90,7 @@ RepeatMasker -pa $PBS_NUM_PPN -s -nolow -xsmall \
              "$DIR/genomes/$name/filtered.split.$PBS_ARRAYID.fa"
 #+END_SRC
 
-#+BEGIN_SRC sh
+#+BEGIN_SRC sh :tangle RM/combine.sh
 cd $DIR
 ROOT=$(git rev-parse --show-toplevel)
 
