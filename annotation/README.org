@@ -96,7 +96,41 @@ ROOT=$(git rev-parse --show-toplevel)
 
 [ -z $name ] && exit
 
+cat $DIR/RM/$name/*/filtered.split.*.fa.out.gff > $DIR/RM/$name.gff
+cat $DIR/RM/$name/*/filtered.split.*.fa.masked > $DIR/RM/$name.softmask.fa
 
-cat $DIR/RM/$name/*/$name.part-??.fa.masked > $DIR/RM/$name.softmask.fa
+
+
+#+END_SRC
+
+* BUSCO
+#+HEADER: :shebang #!/bin/bash :tangle busco/run.sh :mkdirp yes
+#+HEADER: :prologue #PBS -N busco -l nodes=1:ppn=12 -l walltime=192:00:00 -q q48p192h -t 1
+#+BEGIN_SRC sh :var genomes=genomes[,0]
+source /work/maa146/PerchGenome/analysis/annotation/bin/busco-3/bin/activate
+  
+ml gcc/4.9.3
+ml igbb augustus/3.2.3 blast/2.7.1
+export AUGUSTUS_CONFIG_PATH=$DIR/augustus/config
+
+[ -z $name ] && exit
+
+cd $DIR/busco
+run_BUSCO.py -i $DIR/genomes/$name/filtered.fa \
+             -l /work/datasets/igbb/busco/embryophyta_odb9 \
+             -m genome \
+             -c $PBS_NUM_PPN \
+             -o $name \
+             -r -t tmp_${lib[0]}
+
+#RENAME augustus model parameters and link it to proper place
+cd run_$name/augustus_output/retraining_parameters
+tmp_name=$(basename BUSCO_${name}_*_parameters.cfg _parameters.cfg)
+ls -1 ${tmp_name}_* | sed "s/$tmp_name//" | xargs -i mv ${tmp_name}{} BUSCO_${name}{}
+sed -i "s/$tmp_name/BUSCO_${name}/" BUSCO_${name}*
+
+ln -s $DIR/busco/run_${name}/augustus_output/retraining_parameters \
+   $DIR/augustus/config/species/BUSCO_${name}
+
 
 #+END_SRC
