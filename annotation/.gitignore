@@ -6,3 +6,11 @@ genomes/*/
 RM/*/*/
 RM/run.sh
 RM/combine.sh
+
+busco/tmp_*
+busco/*/blast_output
+busco/*/hmmer_output
+busco/*/translated_proteins
+busco/*/augustus_output
+busco/*/single_copy_busco_sequences
+busco/run.sh

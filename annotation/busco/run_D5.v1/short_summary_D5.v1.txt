@@ -1,0 +1,15 @@
+# BUSCO version is: 3.1.0 
+# The lineage dataset is: embryophyta_odb9 (Creation date: 2016-02-13, number of species: 30, number of BUSCOs: 1440)
+# To reproduce this run: python /work/maa146/PerchGenome/analysis/annotation/bin/busco-3/bin/run_BUSCO.py -i /work/maa146/D5D10/annotation//genomes/D5.v1/filtered.fa -o D5.v1 -l /work/datasets/igbb/busco/embryophyta_odb9/ -m genome -c 8 -t tmp_/ -sp arabidopsis
+#
+# Summarized benchmarking in BUSCO notation for file /work/maa146/D5D10/annotation//genomes/D5.v1/filtered.fa
+# BUSCO was run in mode: genome
+
+	C:89.7%[S:82.0%,D:7.7%],F:2.2%,M:8.1%,n:1440
+
+	1292	Complete BUSCOs (C)
+	1181	Complete and single-copy BUSCOs (S)
+	111	Complete and duplicated BUSCOs (D)
+	32	Fragmented BUSCOs (F)
+	116	Missing BUSCOs (M)
+	1440	Total BUSCO groups searched
