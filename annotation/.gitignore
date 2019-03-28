@@ -23,3 +23,6 @@ genemark/*/output/*
 
 snap/train.sh
 snap/tmp_*
+
+maker.1/run.sh
+maker.1/setup.sh
