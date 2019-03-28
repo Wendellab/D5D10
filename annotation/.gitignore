@@ -1,0 +1,8 @@
+*~
+
+genomes/filter.sh
+genomes/*/
+
+RM/*/*/
+RM/run.sh
+RM/combine.sh
