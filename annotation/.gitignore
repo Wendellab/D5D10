@@ -14,3 +14,10 @@ busco/*/translated_proteins
 busco/*/augustus_output
 busco/*/single_copy_busco_sequences
 busco/run.sh
+
+genemark/run.sh
+genemark/*/*
+!genemark/*/output/
+genemark/*/output/*
+!genemark/*/output/gmhmm.mod
+
