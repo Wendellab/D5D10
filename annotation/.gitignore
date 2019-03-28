@@ -21,3 +21,5 @@ genemark/*/*
 genemark/*/output/*
 !genemark/*/output/gmhmm.mod
 
+snap/train.sh
+snap/tmp_*
