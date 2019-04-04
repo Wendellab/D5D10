@@ -1,0 +1,147 @@
+diff -ruN /usr/local/igbb/augustus-3.2.3/scripts/autoAug.pl ./autoAug.pl
+--- /usr/local/igbb/augustus-3.2.3/scripts/autoAug.pl	2017-02-09 08:43:17.000000000 -0600
++++ ./autoAug.pl	2019-04-03 08:30:14.000000000 -0500
+@@ -66,7 +66,7 @@
+ my $perlCmdString;                    # to store perl commands
+ my $cmdString;                        # to store shell commands
+ my $string;          		      # temp string for perl-scripts, which will be called in this script
+-
++my $threads;
+ 
+ 
+ # usage
+@@ -129,7 +129,8 @@
+ 	    'useexisting!' => \$useexisting,
+ 	    'utr!' => \$utr,
+ 	    'help!' => \$help,
+-            'pasapolyAhints!' => \$pasapolyAhints 
++            'pasapolyAhints!' => \$pasapolyAhints,
++            'threads|p=i' => \$threads
+     	);
+ 
+ if ($help) {print "$usage\n"; exit(0);}
+@@ -750,7 +751,7 @@
+     $trainingset   =   checkFile($trainingset, "training", $usage);
+ 
+     # run autoAugTrain.pl
+-    $perlCmdString="perl $scriptPath/autoAugTrain.pl -t=$trainingset -s=$species $useexistingopt -g=$genome_clean -w=$rootDir $verboseString --opt=$optrounds";
++    $perlCmdString="perl $scriptPath/autoAugTrain.pl -t=$trainingset -s=$species $useexistingopt -g=$genome_clean -w=$rootDir $verboseString --opt=$optrounds --cpus=$threads";
+     print "\n2 $perlCmdString\n" if ($verbose>=2);
+     system("$perlCmdString")==0 or die ("failed to execute: $!\n");
+ 
+@@ -785,7 +786,7 @@
+     my $utrString   ="--utr"          if ($utr_switch);
+    
+     
+-    $perlCmdString = "perl $scriptPath/autoAugPred.pl -g=$genome_clean --species=$species -w=$rootDir $utrString " . 
++    $perlCmdString = "perl $scriptPath/autoAugPred.pl -g=$genome_clean --species=$species -w=$rootDir $utrString --threads $threads " . 
+ 	"$verboseString $hintsString $useexistingopt";
+     $perlCmdString .= " --singleCPU" if ($singleCPU);
+     print "2 $perlCmdString" if ($verbose>=2);
+@@ -844,7 +845,7 @@
+     my $shellDir = "$mainDir/shells";
+ 
+ 
+-    $perlCmdString = "perl $scriptPath/autoAugPred.pl --species=$species --genome=$rootDir/seq/genome_clean.fa --continue --workingdir=$rootDir $verboseString $hintsString $utrString $useexistingopt";
++    $perlCmdString = "perl $scriptPath/autoAugPred.pl --species=$species --genome=$rootDir/seq/genome_clean.fa --continue --workingdir=$rootDir --threads $threads $verboseString $hintsString $utrString $useexistingopt";
+     $perlCmdString .= " --singleCPU" if ($singleCPU);
+     my $abortString = "\nError executing\n$perlCmdString\n";
+     print "3 $perlCmdString\n" if ($verbose >= 3);
+@@ -884,7 +885,7 @@
+     $string="with hints and utr" if($hints_switch && $utr_switch);
+ 
+     print "\n\n1 ####### Now predicting genes $string in the whole sequence...#######\n" if ($verbose>=1);
+-    $perlCmdString="perl $scriptPath/autoAugPred.pl -g=$genome_clean --species=$species $hintsString $utrString --noninteractive --cname=$cname -w=$rootDir $verboseString $useexistingopt";
++    $perlCmdString="perl $scriptPath/autoAugPred.pl -g=$genome_clean --species=$species $hintsString $utrString --noninteractive --cname=$cname -w=$rootDir --threads $threads $verboseString $useexistingopt";
+     print "2 $perlCmdString ...\n" if ($verbose>1);
+     system("$perlCmdString")==0 or die ("failed to execute: $perlCmdString!\n");
+ 
+diff -ruN /usr/local/igbb/augustus-3.2.3/scripts/autoAugPred.pl ./autoAugPred.pl
+--- /usr/local/igbb/augustus-3.2.3/scripts/autoAugPred.pl	2017-02-09 08:43:12.000000000 -0600
++++ ./autoAugPred.pl	2019-04-02 08:57:14.000000000 -0500
+@@ -17,6 +17,7 @@
+ use Cwd;
+ use File::Spec::Functions qw(rel2abs);
+ use File::Basename qw(dirname basename);
++use Parallel::ForkManager;
+ 
+ BEGIN {
+     my $path=rel2abs($0);
+@@ -53,6 +54,7 @@
+ my $perlCmdString;       # to store perl commands
+ my $useexisting=0;       # start with and change existing config, parameter and result files
+ my $help=0;
++my $threads=1;
+ 
+ # absolute path of this script
+ my $absPath=dirname(relToAbs($0));
+@@ -112,7 +114,8 @@
+ 	   'cname=s' => \$cname,
+ 	   'AUGUSTUS_CONFIG_PATH=s' => \$user_config_path,
+ 	   'useexisting!' => \$useexisting,
+-	   'help!' => \$help
++	   'help!' => \$help,
++       'threads=i' => \$threads
+ 	   );
+ 
+ print "\n";
+@@ -161,10 +164,14 @@
+ 	if ($singleCPU){
+ 	    print "1 running augustus jobs aug" . join(" aug", @dopreds) . " sequentially now\n" if ($verbose >= 1);
+ 	    chdir "$workDir/shells/";
++        my $pm = new Parallel::ForkManager($threads);
+ 	    for (my $i=1; $i <= $splitN; $i++){
+-		print "2 running aug$i\n" if ($verbose >= 2);
+-		system ("./aug$i");
++            my $pid = $pm->start and next;
++            print "2 running aug$i\n" if ($verbose >= 2);
++            system ("./aug$i");
++            $pm->finish; # terminate the child process
+ 	    }
++        $pm->wait_all_children;
+ 	    print "1 done with augustus jobs\n" if ($verbose >= 1);
+ 	    continue_aug($shellDir, $utr, $hints);
+ 	} else {
+diff -ruN /usr/local/igbb/augustus-3.2.3/scripts/autoAugTrain.pl ./autoAugTrain.pl
+--- /usr/local/igbb/augustus-3.2.3/scripts/autoAugTrain.pl	2017-02-09 08:43:17.000000000 -0600
++++ ./autoAugTrain.pl	2019-04-02 09:58:02.000000000 -0500
+@@ -45,7 +45,7 @@
+ my $perlCmdString;         # to store perl commands
+ my $cmdString;             # to store shell commands
+ my $useexisting=0;         # start with and change existing config and parameter files
+-
++my $threads=1;
+ my $evalString;
+ 
+ # absolute path of this script
+@@ -91,7 +91,8 @@
+ 	   'estali=s' => \$estali,
+ 	   'verbose+' => \$verbose,
+ 	   'optrounds=i' => \$optrounds,
+-	   'useexisting!' => \$useexisting
++	   'useexisting!' => \$useexisting,
++           'cpus=i' => \$threads
+ 	   );
+ if ($flanking_DNA > 10000){
+     print "flanking_DNA larger than neccessary ($flanking_DNA). Resetting flanking_DNA to 10000.\n";
+@@ -370,9 +371,9 @@
+ 	chdir "$workDir/training/" or die ("Can not chdir to $workDir/training/.\n");
+ 	$string=find("optimize_augustus.pl");
+ 	if($t_b_o==0){
+-	    $cmdString="perl $string --rounds=$optrounds --species=$species $workDir/training/training.gb.train.test --metapars=$configDir/$metaName > optimize.out";
++	    $cmdString="perl $string --rounds=$optrounds --species=$species $workDir/training/training.gb.train.test --metapars=$configDir/$metaName --cpus=$threads > optimize.out";
+ 	} else{
+-	    $cmdString="perl $string --rounds=$optrounds --species=$species $workDir/training/training.gb.train.test --onlytrain=$workDir/training/training.gb.onlytrain --metapars=$configDir/$metaName > optimize.out";
++	    $cmdString="perl $string --rounds=$optrounds --species=$species $workDir/training/training.gb.train.test --onlytrain=$workDir/training/training.gb.onlytrain --metapars=$configDir/$metaName --cpus=$threads > optimize.out";
+ 	}
+ 	print "1 Optimizing meta parameters of AUGUSTUS\n" if ($verbose>=1);
+ 	print "2 Excuting \"$cmdString\" ..." if ($verbose>=2);
+@@ -704,7 +705,7 @@
+     if (!uptodate(["train.gb", "onlytrain.gb"], ["optimize.utr.out"])){
+ 	$string=find("optimize_augustus.pl");
+ 	print "3 Found script $string.\n" if ($verbose>=3);
+-	$perlCmdString="perl $string --rounds=$optrounds --species=$species --trainOnlyUtr=1 --onlytrain=onlytrain.gb  --metapars=$configDir/$metaUtrName train.gb --UTR=on > optimize.utr.out";
++	$perlCmdString="perl $string --rounds=$optrounds --species=$species --trainOnlyUtr=1 --onlytrain=onlytrain.gb  --metapars=$configDir/$metaUtrName train.gb --UTR=on --cpus=$threads > optimize.utr.out";
+ 	print "1 Now optimizing meta parameters of AUGUSTUS for the UTR model." .
+ 	    " This will likely run for a long time..\n" if ($verbose>=1 && $optrounds > 0);
+ 	print "1 Running \"$perlCmdString\"..." if ($verbose>=1);

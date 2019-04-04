@@ -26,3 +26,20 @@ snap/tmp_*
 
 maker.1/run.sh
 maker.1/setup.sh
+maker.1/merge.sh
+maker.1/*/*.maker.output/
+maker.1/*/*.log
+maker.1/*/master_datastore_index.log
+maker.1/*/genome.ann
+maker.1/*/genome.dna
+
+augustus/bin
+augustus/config/
+augustus/include
+augustus/scripts/
+augustus/setup.sh
+augustus/src
+augustus/train.sh
+augustus/*/autoAug
+!augustus/*.tar.gz
+!augustus/autoAug.patch
