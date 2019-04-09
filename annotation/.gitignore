@@ -43,3 +43,15 @@ augustus/train.sh
 augustus/*/autoAug
 !augustus/*.tar.gz
 !augustus/autoAug.patch
+
+maker.2/run.sh
+maker.2/setup.sh
+maker.2/merge.sh
+maker.2/*/*.maker.output/
+maker.2/*/*.log
+maker.2/*/master_datastore_index.log
+maker.2/*/est2genome.gff
+maker.2/*/protein2genome.gff
+maker.2/*/repeats.gff
+maker.2/*/genome.ann
+maker.2/*/genome.dna

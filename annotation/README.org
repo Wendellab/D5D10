@@ -320,7 +320,7 @@ find $DIR/maker.1/$name -name "*_master_datastore_index.log" -printf "%P\n" |
     
 maker2zff -e0 -c0 -d master_datastore_index.log
   
-gff3_merge -s -n -g -d master_datastore_index.log > $DIR/maker.1/$name/$name.gff3
+gff3_merge -s -n -d master_datastore_index.log > $DIR/maker.1/$name.gff3
 #+END_SRC
 
 * AutoAug
@@ -350,5 +350,123 @@ cd $DIR/augustus/
 tar -czf $name.config.tar.gz config/species/$name
 tar -czf $name.autoaug.tar.gz $name/
 
+#+END_SRC
+
+* MAKER.2
+#+BEGIN_SRC sh :var genomes=genomes[,0] :tangle maker.2/setup.sh
+cd $DIR/
+ROOT=$(git rev-parse --show-toplevel)
+
+[ -z $name ] && exit
+
+ml igbb
+ml maker/2.31.9
+
+AUGUSTUS_CONFIG_PATH=$DIR/augustus/config
+
+mkdir $DIR/maker.2/${name}
+
+# Reuse est, protien, and repeat alignments from maker first pass 
+awk '$2 == "est2genome"' $DIR/maker.1/$name.gff3 > $DIR/maker.2/$name/est2genome.gff
+awk '$2 == "protein2genome"' $DIR/maker.1/$name.gff3 > $DIR/maker.2/$name/protein2genome.gff
+awk '$2 ~ "repeat"' $DIR/maker.1/$name.gff3 > $DIR/maker.2/$name/repeats.gff
+
+declare -A maker_opts
+maker_opts["genome"]=$DIR/genomes/$name/filtered.fa
+maker_opts["est_gff"]=$DIR/maker.2/$name/est2genome.gff         #aligned ESTs or mRNA-seq from an external GFF3 file
+maker_opts["protein_gff"]=$DIR/maker.2/$name/protein2genome.gff #aligned protein homology evidence from an external GFF3 file
+
+maker_opts["model_org"]=""
+maker_opts["repeat_protein"]=""
+maker_opts["rm_gff"]=$DIR/maker.2/$name/repeats.gff             #pre-identified repeat elements from an external GFF3 file
+maker_opts["snaphmm"]=$DIR/snap/${name}.hmm                     #SNAP HMM file
+maker_opts["gmhmm"]=$DIR/genemark/${name}/output/gmhmm.mod      #GeneMark HMM file
+maker_opts["augustus_species"]=$name                            #Augustus gene prediction species model
+maker_opts["pred_gff"]=$DIR/mikado/$name/mikado.loci.gff3       #ab-initio predictions from an external GFF3 file
+
+maker_opts["alt_splice"]=1                                      #find alternative splicing
+maker_opts["always_complete"]=1                                 #force start and stop codons
+
+maker_opts["clean_try"]=1                                       #remove all data from previous run before retrying
+maker_opts["clean_up"]=1                                        #removes theVoid directory 
+
+
+declare -A maker_exe
+maker_exe["probuild"]=$DIR/bin/gm_et_linux_64/gmes_petap/probuild
+maker_exe["gmhmme3"]=$DIR/bin/gm_et_linux_64/gmes_petap/gmhmme3
+
+#HACK: Add augustus path to end of augustus_species because maker's augustus run
+#      does not respect the AUGUSTUS_CONFIG_PATH env variable
+maker_opts["augustus_species"]+=" --AUGUSTUS_CONFIG_PATH=$AUGUSTUS_CONFIG_PATH"
+
+cd $DIR/maker.2/${name}
+maker -CTL
+
+for key in "${!maker_opts[@]}"; do
+    value=${maker_opts[$key]}
+    sed --follow-symlinks -i "s#^\($key *=\).*#\1$value#" maker_opts.ctl
+done
+
+for key in "${!maker_exe[@]}"; do
+    value=${maker_exe[$key]}
+    sed --follow-symlinks -i "s#^\($key *=\).*#\1$value#" maker_exe.ctl
+done
+
+
+#+END_SRC
+
+#+HEADER: :prologue #PBS -N maker -l walltime=48:00:00
+#+BEGIN_SRC sh :var genomes=genomes[,0] :tangle maker.2/run.sh
+cd $DIR/
+ROOT=$(git rev-parse --show-toplevel)
+
+[ -z $name ] && exit
+
+ml igbb
+ml maker/2.31.9
+
+cd $DIR/maker.2/$name || exit
+mkdir -p $DIR/maker.2/$name/tmp/$PBS_ARRAYID
+
+maker -fix_nucleotides \
+      -b $PBS_ARRAYID \
+      -g "$DIR/genomes/$name/filtered.split.$PBS_ARRAYID.fa" \
+      -c $PBS_NUM_PPN \
+      -TMP $DIR/maker.2/$name/tmp/$PBS_ARRAYID/ \
+      --ignore_nfs_tmp \
+    |& tee ${PBS_ARRAYID}.log
+
+rm -R $DIR/maker.2/$name/tmp/$PBS_ARRAYID
+tar -C $DIR/maker.2/$name/ \
+    -czf $PBS_ARRAYID.tar.gz \
+    $PBS_ARRAYID.maker.output/${PBS_ARRAYID}_{datastore/,master_datastore_index.log} $PBS_ARRAYID.log
+#+END_SRC
+
+#+BEGIN_SRC sh :var genomes=genomes[,0] :tangle maker.2/merge.sh
+cd $DIR/
+ROOT=$(git rev-parse --show-toplevel)
+
+[ -z $name ] && exit
+
+ml igbb
+ml maker/2.31.9
+
+cd $DIR/maker.2/$name || exit
+
+find $DIR/maker.2/$name -name "*_master_datastore_index.log" -printf "%P\n" |
+    xargs awk 'function dirname (pathname){
+    	                if (!sub(/\/[^\/]*\/?$/, "", pathname))
+                           return "."
+                        else if (pathname != "")
+                           return pathname
+                        else
+                           return "/"
+               }
+               {file=dirname(FILENAME); 
+                $2 = file "/" $2;} 1;' OFS="\t" > $DIR/maker.2/$name/master_datastore_index.log
+    
+maker2zff -e0 -c0 -d master_datastore_index.log
+  
+gff3_merge -s -n -g -d master_datastore_index.log > $DIR/maker.2/$name.gff3
 #+END_SRC
 
