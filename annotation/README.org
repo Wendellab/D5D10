@@ -2,7 +2,7 @@
 #+DRAWERS: HIDDEN
 #+OPTIONS: d:RESULTS ^:nil
 #+STARTUP: hideblocks align
-#+PROPERTY:  header-args :exports results :eval never-export :mkdirp yes  :var DIR=(file-name-directory buffer-file-name) 
+#+PROPERTY:  header-args :exports results :eval never-export :mkdirp yes  :var DIR=(file-name-directory buffer-file-name) :colnames yes
 
 #+BEGIN_COMMENT
 The genomes table sets-up the annotation pipeline. Name is the output prefix,
@@ -11,9 +11,9 @@ indicates whether the fasta headers need to be renamed (0 or 1), and Filter is
 the minimum contig length (0 for no filtering)
 #+END_COMMENT
 #+NAME: genomes
-| Name  | Path                                   | Rename | Filter |
-|-------+----------------------------------------+--------+--------|
-| D5.v1 | genomes/raimondii.juiced_V1.0.fasta.gz |      0 |      0 |
+| Name  | Path                                   | Busco DB         | Rename | Filter |
+|-------+----------------------------------------+------------------+--------+--------|
+| D5.v1 | genomes/raimondii.juiced_V1.0.fasta.gz | embryophyta_odb9 |      0 |      0 |
 
 #+BEGIN_COMMENT
 The RNA table is used to specify RNA-seq libraries. Name should match an entry
@@ -53,7 +53,7 @@ PATH=$PATH:$DIR/augustus/scripts
 for name in "${!genomes[@]}"; do
     readarray -t lib <<< "${genomes[$name]}"
 
-    if [ ${lib[1]} -ne 0 ]; then
+    if [ ${lib[2]} -ne 0 ]; then
     pv "$DIR/${lib[0]}" | zcat |
       awk 'BEGIN {count=1}
             /^>/ {printf ">%s_%d\n", name, count++}
@@ -64,8 +64,8 @@ for name in "${!genomes[@]}"; do
 
     mkdir $DIR/genomes/$name/
 
-    if [ ${lib[2]} -ne 0 ]; then
-        /home/maa146/bin/fasta_filter.pl "$DIR/${name}.fa" --length=${lib[2]} > "$DIR/genomes/${name}/filtered.fa"
+    if [ ${lib[3]} -ne 0 ]; then
+        /home/maa146/bin/fasta_filter.pl "$DIR/${name}.fa" --length=${lib[3]} > "$DIR/genomes/${name}/filtered.fa"
     else
         ln -s "$DIR/genomes/$name.fa" "$DIR/genomes/$name/filtered.fa" 
     fi
@@ -124,13 +124,13 @@ rmOutToGFF3.pl $DIR/RM/$name.out |
 #+END_SRC
 
 * BUSCO
+
+
 #+HEADER: :shebang #!/bin/bash :tangle busco/run.sh :mkdirp yes
 #+HEADER: :prologue #PBS -N busco -l nodes=1:ppn=12 -l walltime=192:00:00 -q q48p192h -t 1
 #+BEGIN_SRC sh :var genomes=genomes[,0]
-source /work/maa146/PerchGenome/analysis/annotation/bin/busco-3/bin/activate
-  
 ml gcc/4.9.3
-ml igbb augustus/3.2.3 blast/2.7.1
+ml igbb augustus/3.2.3 blast/2.7.1 busco/3.1.0
 export AUGUSTUS_CONFIG_PATH=$DIR/augustus/config
 
 [ -z $name ] && exit
@@ -468,5 +468,296 @@ find $DIR/maker.2/$name -name "*_master_datastore_index.log" -printf "%P\n" |
 maker2zff -e0 -c0 -d master_datastore_index.log
   
 gff3_merge -s -n -g -d master_datastore_index.log > $DIR/maker.2/$name.gff3
+#+END_SRC
+
+* Functional
+
+** IPRScan
+
+#+HEADER: :prologue #PBS -N iprscan -l walltime=12:00:00
+#+BEGIN_SRC sh :var genomes=genomes[,0] :tangle iprscan/run.sh
+cd $DIR/
+ROOT=$(git rev-parse --show-toplevel)
+
+[ -z $name ] && exit
+
+ml igbb maker/2.31.9 blast/2.7.1 python/3.6.2
+PATH=/usr/local/java/jdk1.8.0_92/bin/:$PATH
+
+
+mkdir -p $DIR/iprscan/$name/$PBS_ARRAYID
+cd $DIR/iprscan/$name/$PBS_ARRAYID
+
+fasta_merge -d $DIR/maker.2/$name/$PBS_ARRAYID.maker.output/${PBS_ARRAYID}_master_datastore_index.log -o $PBS_ARRAYID
+
+$DIR/bin/interproscan-5.32-71.0/interproscan.sh \
+   -i $DIR/iprscan/$name/$PBS_ARRAYID/$PBS_ARRAYID.all.maker.proteins.fasta \
+   -f xml,tsv \
+   -pathways \
+   -iprlookup \
+   -goterms \
+   -dp  \
+   -appl 'Pfam, PRINTS, PANTHER, TIGRFAM, SUPERFAMILY, PIRSF, ProSiteProfiles, ProSitePatterns, SMART' \
+   -b iprscan.$PBS_ARRAYID \
+   -cpu $PBS_NUM_PPN
+
+#+END_SRC
+
+
+** BLAST
+#+HEADER: :prologue #PBS -N blast -l walltime=12:00:00
+#+BEGIN_SRC sh :var genomes=genomes[,0] :tangle blast/run.sh
+cd $DIR/
+ROOT=$(git rev-parse --show-toplevel)
+
+[ -z $name ] && exit
+
+ml igbb maker/2.31.9 blast/2.7.1 python/3.6.2
+PATH=/usr/local/java/jdk1.8.0_92/bin/:$PATH
+
+
+mkdir -p $DIR/blast/$name/
+cd $DIR/blast/$name/
+
+fasta_merge -d $DIR/maker.2/$name/$PBS_ARRAYID.maker.output/${PBS_ARRAYID}_master_datastore_index.log -o $PBS_ARRAYID
+
+blastp -query $DIR/blast/$name/$PBS_ARRAYID.all.maker.proteins.fasta \
+       -db /work/datasets/igbb/uniprot_sprot.20181010.fasta \
+       -outfmt 6 \
+       -out $DIR/blast/$name/$PBS_ARRAYID.out \
+       -num_threads $PBS_NUM_PPN
+
+
+
+#+END_SRC
+
+* Finalize
+
+** Rename
+#+BEGIN_SRC sh :var genomes=genomes[,0] :tangle final/run.sh
+cd $DIR/
+ROOT=$(git rev-parse --show-toplevel)
+
+[ -z $name ] && exit
+
+ml igbb maker/2.31.9
+
+prefix=$DIR/final/$name
+
+maker_map_ids --prefix ${name}_ --justify 8 $DIR/maker.2/$name.gff3 > $prefix.map
+cp $DIR/maker.2/$name.gff3 $DIR/final/
+map_gff_ids $prefix.{map,gff3}
+
+#Since mikado adds a name to the gff and maker's fasta_merge uses the name if
+#one exists, we need to add all the mikado names to the map file
+perl -wlane 'chomp; next unless $F[8];
+             my $d = {map {split /=/, $_, 2} split /;/, $F[8]}; 
+             if($d->{Name} && $d->{Name} ne $d->{ID}){
+                printf "%s\t%s\n", @$d{qw/Name ID/}
+             } '   final/D5.v1.pred.gff3 >> $prefix.map
+
+
+fasta_merge -d $DIR/maker.2/$name/master_datastore_index.log -o $prefix
+cat $DIR/iprscan/$name/*/iprscan.*.tsv > $prefix.iprscan
+cat $DIR/blast/$name/*.out             > $prefix.blastp
+
+map_fasta_ids $prefix.map   $prefix.all.maker.proteins.fasta
+map_fasta_ids $prefix.map   $prefix.all.maker.transcripts.fasta
+map_data_ids  $prefix.map   $prefix.iprscan
+map_data_ids  $prefix.map   $prefix.blastp
+
+uniprot=/work/datasets/igbb/uniprot_sprot.20181010.fasta
+maker_functional_gff   $uniprot $prefix.blastp $prefix.gff3                        > $prefix.putative_function.gff3
+maker_functional_fasta $uniprot $prefix.blastp $prefix.all.maker.proteins.fasta    > $prefix.proteins.putative_function.fa
+maker_functional_fasta $uniprot $prefix.blastp $prefix.all.maker.transcripts.fasta > $prefix.transcripts.putative_function.fa
+
+ipr_update_gff $prefix.putative_function.gff3 $prefix.iprscan > $prefix.putative_function.domain_added.gff3
+
+mv $prefix.putative_function.domain_added.gff3 $prefix.gff3
+mv $prefix.proteins.putative_function.fa       $prefix.proteins.fa
+mv $prefix.transcripts.putative_function.fa    $prefix.transcripts.fa
+
+rm $prefix.all.maker.*.fasta $prefix.map $prefix.putative_function.gff3 $prefix.iprscan $prefix.blastp
+cp $DIR/genomes/$name.fa $prefix.fa
+#+END_SRC
+
+** Busco
+#+HEADER: :prologue #PBS -N busco -l walltime=192:00:00
+#+BEGIN_SRC sh :var genomes=genomes :tangle final/busco.sh
+cd $DIR/
+ROOT=$(git rev-parse --show-toplevel)
+
+ml python/2.7.8
+ml igbb busco/3.1.0
+
+[ -z $name ] && exit
+
+readarray -t lib <<< "${genomes[$name]}"
+
+cd $DIR/final/
+
+echo run_BUSCO.py -i $DIR/final/$name.transcripts.fa \
+             -l /work/datasets/igbb/busco/${lib[1]} \
+             -m transcriptome \
+             -c $PBS_NUM_PPN \
+             -o $name \
+             -t tmp_${name}
+
+pushd run_$name
+for dir in blast_output hmmer_output augustus_output single_copy_busco_sequences; do
+  [ -d $dir ] && tar -czf $dir.tar.gz $dir
+done
+popd
+
+
+#+END_SRC
+
+** Graphs
+
+
+#+BEGIN_SRC R :tangle final/graph.R
+library(ggplot2)
+library(reshape2)
+
+args = commandArgs(trailingOnly=TRUE)
+name = args[1]
+
+getAttributeField <- function (x, field, attrsep = ";") {
+    s = strsplit(x, split = attrsep, fixed = TRUE)
+    sapply(s, function(atts) {
+        a = strsplit(atts, split = "=", fixed = TRUE)
+        m = match(field, sapply(a, "[", 1))
+        if (!is.na(m)) {
+            rv = a[[m]][2]
+        } else {
+            rv = as.character(NA)
+        }
+        return(rv)
+    })
+}
+
+gffRead <- function(gffFile, nrows = -1) {
+    cat("Reading ", gffFile, ": ", sep="")
+    gff = read.table(gffFile, sep="\t", as.is=TRUE, quote="", header=FALSE, comment.char="#", nrows = nrows,
+                     colClasses=c("character", "character", "character", "integer", "integer", "character",
+                                  "character", "character", "character"))
+    colnames(gff) = c("seqname", "source", "feature", "start", "end", "score", "strand", "frame", "attributes")
+    cat("found", nrow(gff), "rows with classes:", paste(sapply(gff, class), collapse=", "), "\n")
+    return(gff)
+} 
+
+gff <- gffRead(file.path(DIR,'final', paste0(name, '.gff3')))
+
+mrna <- subset(gff, feature == 'mRNA')
+
+data=as.data.frame(do.call(rbind, lapply(strsplit(getAttributeField(mrna$attributes, '_QI'), split="\\|"), as.numeric)))
+colnames(data) = c("5′UTR Length",
+                 "splice sites confirmed by an EST/mRNA-seq alignment",
+                 "exons that match an EST/mRNA-seq alignment",
+                 "exons that overlap EST/mRNA-seq or protein alignments",
+                 "splice sites confirmed by ab-initio gene prediction",
+                 "exons that overlap an ab-initio gene prediction",
+                 "Number of exons",
+                 "3′UTR Length",
+                 "Protein Length")
+data$AED  <- as.numeric(getAttributeField(mrna$attributes, '_AED'));
+data$eAED <- as.numeric(getAttributeField(mrna$attributes, '_eAED'));
+
+p <- ggplot(data, aes(x=AED)) + geom_histogram(bins=100) + theme_bw()
+ggsave(file.path(DIR,'final', paste0(name, ".AED.histo.png")), p, width=7, height=3.5)
+p <- ggplot(data, aes(x=AED)) + stat_ecdf() + theme_bw()
+ggsave(file.path(DIR,'final', paste0(name, ".AED.cdf.png")), p, width=7, height=3.5)
+
+p <- ggplot(data, aes(x=eAED)) + geom_histogram(bins=100) + theme_bw()
+ggsave(file.path(DIR,'final', paste0(name, ".eAED.histo.png")), p, width=7, height=3.5)
+p <- ggplot(data, aes(x=eAED)) + stat_ecdf() + theme_bw()
+ggsave(file.path(DIR,'final', paste0(name, ".eAED.cdf.png")), p, width=7, height=3.5)
+
+
+
+data.melt = melt(data)
+data.melt$scale = data.melt$variable
+
+levels(data.melt$scale) <- list(
+                   "Length" = c("5′UTR Length", "3′UTR Length", "Protein Length"),
+                   "Homology" = c("splice sites confirmed by an EST/mRNA-seq alignment",
+                                  "exons that match an EST/mRNA-seq alignment",
+                                  "exons that overlap EST/mRNA-seq or protein alignments"),
+                   "Ab-Initio" = c("splice sites confirmed by ab-initio gene prediction",
+                                   "exons that overlap an ab-initio gene prediction"),
+                   "Count"="Number of exons",
+                   "Probability" = c("AED", "eAED")
+)
+p <- ggplot(data.melt, aes(x=variable, y=value)) + geom_boxplot() + facet_wrap(~scale, scales='free', ncol=1) + coord_flip()
+ggsave(file.path(DIR,'final', paste0(name, ".QI.png")), p, width=7, height=9)
+
+
+data <- subset(data, AED <= 0.5)
+
+data.melt = melt(data)
+data.melt$scale = data.melt$variable
+
+levels(data.melt$scale) <- list(
+                   "Length" = c("5′UTR Length", "3′UTR Length", "Protein Length"),
+                   "Homology" = c("splice sites confirmed by an EST/mRNA-seq alignment",
+                                  "exons that match an EST/mRNA-seq alignment",
+                                  "exons that overlap EST/mRNA-seq or protein alignments"),
+                   "Ab-Initio" = c("splice sites confirmed by ab-initio gene prediction",
+                                   "exons that overlap an ab-initio gene prediction"),
+                   "Count"="Number of exons",
+                   "Probability" = c("AED", "eAED")
+)
+p <- ggplot(data.melt, aes(x=variable, y=value)) + geom_boxplot() + facet_wrap(~scale, scales='free', ncol=1) + coord_flip()
+ggsave(file.path(DIR,'final', paste0(name,".QI.filter.png")), p, width=7, height=9)
+
+
+data=data.frame(ID=getAttributeField(mrna$attributes, 'ID'), AED=as.numeric(getAttributeField(mrna$attributes, '_AED')))
+
+aed.counts <- as.data.frame(table(data$AED))
+aed.counts$cumsum <- cumsum(aed.counts$Freq)
+aed.counts$group <- "Gene Counts";
+aed.counts$variable <- "Complete";
+aed.counts$Freq <- NULL
+colnames(aed.counts) <- c("AED", "value", "group", "variable")
+aed.counts$AED <- as.numeric(as.character(aed.counts$AED))
+
+busco=read.delim(file.path(DIR, 'final', paste0('run_', name), paste0('full_table_', name, '.tsv')), 
+                 comment.char='#', col.names=c('Busco', 'Type', 'ID', 'Score', 'Length'), header=F, stringsAsFactors=F)
+busco$Type = factor(busco$Type)
+data=merge(busco, data)
+all_busco = unique
+
+classify <- function (data, aed){
+    subset <- data[data$AED <= aed,];
+    subset[subset$Type == "Duplicated","Type"] <- "Complete";
+
+    r <- as.list(summary(subset$Type));
+    cd <- (table(subset[subset$Type == "Complete", "Busco"])>1)
+    r$Duplicated <- sum(cd);
+    r$Complete <- sum(cd == FALSE);
+    r$Missing <- 1440 - r$Duplicated - r$Complete - r$Fragmented
+    r$AED <- aed
+    return(unlist(r));
+}
+
+
+
+
+test <- melt(as.data.frame(t(sapply(seq(0,1,0.01), classify, data=data))), id.vars='AED')
+test$group <- "BUSCO"
+
+test$variable <- factor(test$variable, levels=rev(levels(test$variable)))
+
+d <- rbind(test, aed.counts)
+d$AED <- as.numeric(d$AED)
+
+p <- ggplot(test, aes(x=AED, group=variable, fill=variable)) +
+#    geom_rect(fill="#fdbf6f", xmin=-0.1, xmax=1.1, ymin=0, ymax=4584)+
+    geom_bar(aes(weight=value),width=0.01) +
+#    scale_fill_manual(values = c('#33a02c', '#b2df8a', '#a6cee3', "#fdbf6f" )) +
+    geom_line(data=aed.counts, aes(y=value)) +
+    scale_x_continuous(breaks=seq(0, 1, by=0.1), sec.axis = dup_axis()  ) +
+    facet_grid(group~.,scales='free_y')
+ggsave(file.path(DIR,'final', paste0(name, ".busco_vs_aed.png")), p, width=7, height=3.5)
 #+END_SRC
 

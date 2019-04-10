@@ -1,0 +1,15 @@
+# BUSCO version is: 3.1.0 
+# The lineage dataset is: embryophyta_odb9 (Creation date: 2016-02-13, number of species: 30, number of BUSCOs: 1440)
+# To reproduce this run: python /usr/local/igbb/busco-v3.1.0/run_BUSCO.py -i /work/maa146/D5D10/annotation//final/D5.v1.pred.transcripts.fa -o D5.v1.pred -l /work/datasets/igbb/busco/embryophyta_odb9/ -m transcriptome -c 8 -t tmp_D5.v1.pred/
+#
+# Summarized benchmarking in BUSCO notation for file /work/maa146/D5D10/annotation//final/D5.v1.pred.transcripts.fa
+# BUSCO was run in mode: transcriptome
+
+	C:82.8%[S:73.8%,D:9.0%],F:6.3%,M:10.9%,n:1440
+
+	1192	Complete BUSCOs (C)
+	1063	Complete and single-copy BUSCOs (S)
+	129	Complete and duplicated BUSCOs (D)
+	91	Fragmented BUSCOs (F)
+	157	Missing BUSCOs (M)
+	1440	Total BUSCO groups searched
