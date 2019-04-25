@@ -1,0 +1,11 @@
+module load mummer/3.23-py2-22xij3j
+module load samtools/1.9-k6deoga
+module load blast-plus/2.7.1-py2-vvbzyor
+
+
+mummer -mum -l 200 Chr01.fasta GrMitome.fasta > mummer.mums
+blastn -query GrMitome.fasta -task blastn -out ChrMitome.out -evalue 1e-50 -subject Chr01.fasta -outfmt 6 -culling_limit 1
+
+samtools faidx Chr01.fasta Chr01:23100000-25000000 > Chr01.NUMT.fasta
+
+blastn -query GrMitome.fasta -task blastn -out ChrMitome.region -evalue 1e-50 -subject Chr01.NUMT.fasta -culling_limit 1
